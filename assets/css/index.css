@@ -1,0 +1,14 @@
+/* TEXTES */
+main .title {
+    font-size: 1.5em;
+    padding: 2% 5%;
+    margin: 2%;
+    background-color: rgba(92, 177, 252, 0.418);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 425px) {
+    main .kermit, main .paques {
+        display: none;
+    }
+}

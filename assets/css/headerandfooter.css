@@ -1,0 +1,45 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*HEADER*/
+nav ul li {
+
+    text-align: center;
+}
+
+nav ul li a {
+    font-variant: small-caps;
+}
+
+nav ul li a:hover{
+    background: #91d4ec58;
+}
+
+/* BORDURES DES BLOCS DE FILTRE PAGES PRODUITS */
+.bloc2 { 
+    border: dotted rgb(199, 197, 197);
+}
+
+/* IMAGES */
+.contenu img {
+    width: 40%;
+}
+
+/* UNDERLINE DES LIENS PANIER */
+.linkunderline {
+    text-decoration: none;
+}
+
+/* FOOTER */
+footer div {
+    height: 20vh;
+}
+
+/* UP BUTTON */
+.up {
+    width: 5%;
+    position: fixed;
+    right: 2%;
+    bottom: 2%;
+}
