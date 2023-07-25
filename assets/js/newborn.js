@@ -1,7 +1,6 @@
 'use strict';
 
 ////// SORT BY
-
 function filterAll() {
   let contents = document.getElementsByClassName('contenu');
   for (let i = 0; i < contents.length; i++) {
@@ -46,3 +45,11 @@ function filterComfort() {
       }
   }
 }
+
+//// UPPER IMAGE DISPPEARING ON SCROLL > 100 
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 100) {
+      let image = document.getElementById('upperImg');
+      image.classList.add('hide');
+  }
+});

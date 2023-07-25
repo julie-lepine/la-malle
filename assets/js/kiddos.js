@@ -1,7 +1,5 @@
 'use strict';
 
-//// !!!!!!!!! AJOUTER DISPARITION IMAGE HAUT DE PAGE AU SCROLL
-
 /* AJOUTER PLUS TARD LES FONCTIONS DE FILTRE 1 NB ARTICLES PAR PAGE
 Filtrer :
 
@@ -23,8 +21,15 @@ If (jeux.barbie.prix >= 20) {
 }
 */
 
-////// SORT BY
+//// UPPER IMAGE DISPPEARING ON SCROLL > 100 
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+        let image = document.getElementById('upperImg');
+        image.classList.add('hide');
+    }
+});
 
+////// SORT BY
 function filterAll() {
     let contents = document.getElementsByClassName('contenu');
     for (let i = 0; i < contents.length; i++) {
