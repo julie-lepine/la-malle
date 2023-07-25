@@ -94,11 +94,11 @@
         <form action="post" class="pe-3 m-2 text-center">
           <label for="tri">Filtrer :</label>
           <select name="tri" id="tri" class="text-center">
-            <option value="---">- - -</option>
-            <option value="€ croissant">€ croissant</option>
-            <option value="€ décroissant">€ décroissant</option>
-            <option value="Nouveautés">Nouveautés</option>
-            <option value="Promotions">Promotions</option>
+            <option value="---" class="btn active" onclick="filterAll()">Tout montrer</option>
+            <option value="news" class="btn" onclick="filterNew()">Nouveautés</option>
+            <option value="promotions" class="btn" onclick="filterPromo()">Promotions</option>
+            <option value="motricity" class="btn" onclick="filterMotricity()">Motricité</option>
+            <option value="comfort" class="btn" onclick="filterComfort()">Réconfort</option>
           </select>
         </form>
       </section>
@@ -164,42 +164,42 @@
 
     <article class="d-flex justify-content-center pb-3">
       <section class="container d-flex flex-wrap justify-content-around align-items-center">
-      <div class="contenu contenu1 m-3 p-3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv filterDiv">
+      <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv filterDiv motricity">
         <img src="../../assets/img/babies/baby.jpg" alt="book" class="image" />
         <div>
           <p>Livre à toucher - 10 €</p>
         </div>
         <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+      <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv motricity">
         <img src="../../assets/img/babies/bb.jpg" alt="elec" />
         <div>
           <p>Jouet électronique - 20 €</p>
         </div>
         <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+      <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new motricity">
         <img src="../../assets/img/babies/bobby-car.jpg" alt="voiture" />
         <div>
           <p>Triporteur - 30 €</p>
         </div>
         <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+      <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv motricity">
         <img src="../../assets/img/babies/child-2293839_1920.jpg" alt="cubes" />
         <div>
           <p>Les 25 cubes en bois - 20 €</p>
         </div>
         <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+      <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new comfort">
         <img src="../../assets/img/babies/crib-mobile-2654734_1920.jpg" alt="mobile" />
         <div>
           <p>Mobile en bois - 10 €</p>
         </div>
         <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv"
+      <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo comfort"
         id="peluches">
         <img src="../../assets/img/babies/plushes.jpg" alt="peluche" />
         <div>
@@ -208,7 +208,7 @@
         <button type="submit" class="btn btn-info m-3"><a href="/pages/jouets/peluches.html"
             class="link-dark linkunderline">Aller</a></button>
         </div>
-      <div class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+      <div class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new">
         <img src="../../assets/img/babies/seances_photo.jpg" alt="photo" />
         <div>
           <p>Offrez une séance photo à thème ! (à p. de 50 €)</p>
@@ -216,9 +216,7 @@
         <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
       </div>
     </section>
-
     </article>
-
   </main>
 
   <footer class="footer bg-info footer-expand-lg mt-3">
@@ -243,6 +241,7 @@
     <a href="#up"><img src="../../assets/img/index/up.png" alt="up button" class="up" /></a>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/newborn.js"></script>
 
 </body>
 

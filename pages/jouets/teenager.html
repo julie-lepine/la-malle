@@ -91,13 +91,14 @@
       <hr>
       <section class="d-flex justify-content-end mb-3 mt-3">
         <form action="post" class="pe-3 m-2 text-center">
-          <label for="tri">Trier :</label>
+          <label for="tri">Filtrer :</label>
           <select name="tri" id="tri" class="text-center">
-            <option value="---">- - -</option>
-            <option value="€ croissant">€ croissant</option>
-            <option value="€ décroissant">€ décroissant</option>
-            <option value="Nouveautés">Nouveautés</option>
-            <option value="Promotions">Promotions</option>
+            <option value="---" class="btn active" onclick="filterAll()">Tout montrer</option>
+            <option value="news" class="btn" onclick="filterNew()">Nouveautés</option>
+            <option value="promotions" class="btn" onclick="filterPromo()">Promotions</option>
+            <option value="pamper" class="btn" onclick="filterPamper()">Soins</option>
+            <option value="goOut" class="btn" onclick="filterGoOut()">Sorties</option>
+            <option value="tech" class="btn" onclick="filterTech()">Technologies</option>
           </select>
         </form>
       </section>
@@ -163,7 +164,7 @@
 
     <article class="d-flex justify-content-center pb-3">
       <section class="container d-flex flex-wrap justify-content-around align-items-center">
-        <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+        <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo">
           <img src="../../assets/img/teenagers/book.jpg" alt="books" />
           <div>
             <p>Sélection de livres - 10 €</p>
@@ -180,7 +181,7 @@
           <button type="submit" class="btn btn-dark m-3"><a href="#"
               class="link-light linkunderline">Ajouter</a></button>
         </div>
-      <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+      <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new goOut">
         <img src="../../assets/img/teenagers/concert.jpg" alt="concert" />
         <div>
           <p>Place de concert au choix - 50 €</p>
@@ -188,7 +189,7 @@
         <button type="submit" class="btn  btn-dark m-3"><a href="#"
             class="link-light linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+      <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv goOut">
         <img src="../../assets/img/teenagers/disney.jpg" alt="billes" />
         <div>
           <p>Entrée pour un parc au choix - 50 €</p>
@@ -196,7 +197,7 @@
         <button type="submit" class="btn  btn-dark m-3"><a href="#"
             class="link-light linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+      <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo">
         <img src="../../assets/img/teenagers/figurines.jpg" alt="miniatures" />
         <div>
           <p>Figurines - à p. de 15 €</p>
@@ -214,7 +215,7 @@
         <button type="submit" class="btn  btn-dark m-3"><a href="#"
             class="link-light linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+      <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new tech">
         <img src="../../assets/img/teenagers/nes.png" alt="supernes" />
         <div>
           <p>Super NES + 2 manettes + 4 jeux - 250 €</p>
@@ -222,7 +223,7 @@
         <button type="submit" class="btn  btn-dark m-3"><a href="#"
             class="link-light linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+      <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new">
         <img src="../../assets/img/teenagers/netflix.jpg" alt="netflix" />
         <div>
           <p>Carte cadeaux abonnement 1 mois au choix - 10 €</p>
@@ -230,7 +231,7 @@
         <button type="submit" class="btn  btn-dark m-3"><a href="#"
             class="link-light linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+      <div class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo tech">
         <img src="../../assets/img/teenagers/tablette.jpg" alt="ebook" />
         <div>
           <p>Ebook - 90 €</p>
@@ -238,7 +239,7 @@
         <button type="submit" class="btn  btn-dark m-3"><a href="#"
             class="link-light linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu8 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+      <div class="contenu contenu8 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv pamper">
         <img src="../../assets/img/teenagers/hairs.jpg" alt="coiffeur" />
         <div>
           <p>Une coupe chez le coiffeur de votre choix - 20 €</p>
@@ -246,7 +247,7 @@
         <button type="submit" class="btn  btn-dark m-3"><a href="#"
             class="link-light linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu9 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+      <div class="contenu contenu9 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv pamper">
         <img src="../../assets/img/teenagers/skin.jpg" alt="soins" />
         <div>
           <p>Coffret soins visage - 20 €</p>
@@ -289,6 +290,7 @@
     <a href="#up"><img src="../../assets/img/index/up.png" alt="up button" class="up" /></a>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../assets/js/teens.js"></script>
 
 </body>
 
