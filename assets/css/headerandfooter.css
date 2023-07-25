@@ -21,6 +21,15 @@ nav ul li a:hover{
     border: dotted rgb(199, 197, 197);
 }
 
+/* CASES DE CHAQUE ARTICLE */
+.contenu {
+    width: 20vw;
+    min-width: 20vw;
+    max-width: 20vw;
+    height: 35vh;
+    min-height: 35vh;
+}
+
 /* IMAGES */
 .contenu img {
     width: 40%;

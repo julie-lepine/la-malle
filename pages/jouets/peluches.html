@@ -83,6 +83,7 @@
         Plush toys</li>
     </ol>
   </nav>
+
   <main class="container-fluid">
     <article>
       <section class="d-flex justify-content-center mb-3">
@@ -91,17 +92,7 @@
       <hr />
       <section class="d-flex justify-content-end mb-3 mt-3">
         <form action="post" class="pe-3 m-2 text-center">
-          <label for="nb">Nb d'article / page</label>
-          <select name="nb" id="nb" class="text-center">
-            <option value="---">- - -</option>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-          </select>
-        </form>
-        <form action="post" class="pe-3 m-2 text-center">
-          <label for="tri">Trier par :</label>
+          <label for="tri">Trier :</label>
           <select name="tri" id="tri" class="text-center">
             <option value="---">- - -</option>
             <option value="€ croissant">€ croissant</option>
@@ -112,171 +103,163 @@
         </form>
       </section>
     </article>
-    <article class="container">
-      <aside class="contenu10">
-        <h3 class="text-center mt-3">Filtrer :</h3>
-        <section class="bloc2 d-flex flex-column m-3 p-3">
-          <h4>Prix</h4>
-          <div class="form-check">
-            <input type="checkbox" name="low" id="low" class="form-check-input" />
-            <label for="low" class="form-check-label">Jusqu'à 15 €</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="mid" id="mid" class="form-check-input" />
-            <label for="mid" class="form-check-label">De 15 € à 25 €</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="ok" id="ok" class="form-check-input" />
-            <label for="ok" class="form-check-label">De 25 € à 45 €</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="high" id="high" class="form-check-input" />
-            <label for="high" class="form-check-label">45 € et +</label>
-          </div>
-        </section>
-        <section class="bloc2 d-flex flex-column m-3 p-3">
-          <h4>Marque :</h4>
-          <div class="form-check">
-            <input type="checkbox" name="Tomy" id="Tomy" class="form-check-input" />
-            <label for="Tomy" class="form-check-label">Tomy</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="Disney" id="Disney" class="form-check-input" />
-            <label for="Disney" class="form-check-label">Disney</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="Fait_main" id="Fait_main" class="form-check-input"/>
-            <label for="Fait_main" class="form-check-label">Fait main</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="Vtech" id="Vtech" class="form-check-input" />
-            <label for="Vtech" class="form-check-label">Vtech</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="Dinausaurus" id="Dinausaurus" class="form-check-input" />
-            <label for="Dinausaurus" class="form-check-label"> Dinausaurus</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="Duplo" id="Duplo" class="form-check-input" />
-            <label for="Duplo" class="form-check-label">Duplo</label>
-          </div>
-        </section>
-        <section class="bloc2 d-flex flex-column m-3 p-3">
-          <h4>Âge :</h4>
-          <div class="form-check">
-            <input type="checkbox" name="Babies" id="Babies" class="form-check-input">
-            <label for="Babies" class="form-check-label">Babies</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="Kiddos" id="Kiddos" class="form-check-input">
-            <label for="Kiddos" class="form-check-label">Kiddos</label>
-          </div>
-        </section>
-      </aside>
 
-      <section
-        class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
-        <img src="../../assets/img/peluches/baleine.jpg" alt="baleine" />
-        <div>
-          <p>Baleine, 22cm - 10 €</p>
+        <!-- BLOC DE FILTRES -->
+    <!-- <aside class="contenu10">
+      <h3 class="text-center mt-3">Filtrer :</h3>
+      <section class="bloc2 d-flex flex-column m-3 p-3">
+        <h4>Prix</h4>
+        <div class="form-check">
+          <input type="checkbox" name="low" id="low" class="form-check-input" />
+          <label for="low" class="form-check-label">Jusqu'à 15 €</label>
         </div>
-        <button type="submit" class="btn btn-secondary m-3"><a href="#"
-            class="link-dark linkunderline">Ajouter</a></button>
-      </section>
-      <section
-        class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
-        <img src="../../assets/img/peluches/trex.jpg" alt="diplo" />
-        <div>
-          <p>T-Rex, 45cm - 55 €</p>
+        <div class="form-check">
+          <input type="checkbox" name="mid" id="mid" class="form-check-input" />
+          <label for="mid" class="form-check-label">De 15 € à 25 €</label>
         </div>
-        <button type="submit" class="btn btn-secondary m-3"><a href="#"
-            class="link-dark linkunderline">Ajouter</a></button>
-      </section>
-      <section
-        class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
-        <img src="../../assets/img/peluches/lapin.jpg" alt="lapinnaissance" />
-        <div>
-          <p>Lapin de naissance - 20 €</p>
+        <div class="form-check">
+          <input type="checkbox" name="ok" id="ok" class="form-check-input" />
+          <label for="ok" class="form-check-label">De 25 € à 45 €</label>
         </div>
-        <button type="submit" class="btn btn-secondary m-3"><a href="#"
-            class="link-dark linkunderline">Ajouter</a></button>
-      </section>
-      <section
-        class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
-        <img src="../../assets/img/peluches/lapin2.jpg" alt="lapin" />
-        <div>
-          <p>Lapin câlin, 18cm - 20 €</p>
+        <div class="form-check">
+          <input type="checkbox" name="high" id="high" class="form-check-input" />
+          <label for="high" class="form-check-label">45 € et +</label>
         </div>
-        <form action="post">
-          <label for="figurine">Sélection du modèle :</label>
-          <select name="figurine" id="figurine" class="text-center">
-            <option value="--">- - -</option>
-            <option value="gris">Gris</option>
-            <option value="rouge">Rouge</option>
-            <option value="vert">Vert</option>
-            <option value="orange">Orange</option>
-          </select>
-        </form>
-        <button type="submit" class="btn btn-secondary m-3"><a href="#"
-            class="link-dark linkunderline">Ajouter</a></button>
       </section>
-      <section
-        class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
-        <img src="../../assets/img/peluches/nounours.jpg" alt="nounours" />
-        <div>
-          <p>Nounours géant, 95cm - 80 €</p>
+      <section class=" bloc2 d-flex flex-column m-3 p-3">
+        <h4>Marque :</h4>
+        <div class="form-check">
+          <input type="checkbox" name="Hachette" id="Hachette" class="form-check-input" />
+          <label for="Hachette" class="form-check-label">Hachette</label>
         </div>
-        <button type="submit" class="btn btn-secondary m-3"><a href="#"
-            class="link-dark linkunderline">Ajouter</a></button>
-      </section>
-      <section
-        class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
-        <img src="../../assets/img/peluches/plushes.jpg" alt="mouton" />
-        <div>
-          <p>Moutons tout doux, 35cm - 48 €</p>
+        <div class="form-check">
+          <input type="checkbox" name="Robotonics" id="Robotonics" class="form-check-input" />
+          <label for="Robotonics" class="form-check-label">Robotonics</label>
         </div>
-        <button type="submit" class="btn btn-secondary m-3"><a href="#"
-            class="link-dark linkunderline">Ajouter</a></button>
-      </section>
-      <section
-        class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
-        <img src="../../assets/img/peluches/sac_a_dos.jpg" alt="sac_a_dos" />
-        <div>
-          <p>Sac à dos - 35 €</p>
+        <div class="form-check">
+          <input type="checkbox" name="Mattel" id="Mattel" class="form-check-input" />
+          <label for="Mattel" class="form-check-label">Mattel</label>
         </div>
-        <form action="post">
-          <label for="sac_a_dos"></label>
-          <select name="sac_a_dos" id="sac_a_dos" class="text-center">
-            <option value="---">- - -</option>
-            <option value="Âne">Âne</option>
-            <option value="Vache">Vache</option>
-            <option value="Dragon">Dragon</option>
-            <option value="Cochon">Cochon</option>
-          </select>
-        </form>
-        <button type="submit" class="btn btn-secondary m-3"><a href="#"
-            class="link-dark linkunderline">Ajouter</a></button>
-      </section>
-      <section
-        class="contenu contenu8 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
-        <img src="../../assets/img/peluches/santa.jpg" alt="perenoel" />
-        <div>
-          <p>Père Noël, 9cm - 8 €</p>
+        <div class="form-check">
+          <input type="checkbox" name="Ty" id="Ty" class="form-check-input" />
+          <label for="Ty" class="form-check-label">Ty</label>
         </div>
-        <button type="submit" class="btn btn-secondary m-3"><a href="#"
-            class="link-dark linkunderline">Ajouter</a></button>
-      </section>
-      <section
-        class="contenu contenu9 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
-        <img src="../../assets/img/peluches/diplo2.jpg" alt="diplodocus" />
-        <div>
-          <p>Diplodocus, 45 cm - 55 €</p>
+        <div class="form-check">
+          <input type="checkbox" name="DansLeCoin" id="DansLeCoin" class="form-check-input" />
+          <label for="DansLeCoin" class="form-check-label">DansLeCoin</label>
         </div>
-        <button type="submit" class="btn btn-secondary m-3"><a href="#"
-            class="link-dark linkunderline">Ajouter</a></button>
       </section>
-    </article>
-  </main>
+      <section class=" bloc2 d-flex flex-column m-3 p-3">
+        <h4>Âge :</h4>
+        <div class="form-check">
+          <input type="checkbox" name="Ecole" id="Ecole" class="form-check-input">
+          <label for="Ecole" class="form-check-label">Ecole</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" name="Collège" id="Collège" class="form-check-input">
+          <label for="Collège" class="form-check-label">Collège</label>
+        </div>
+      </section>
+    </aside> -->
+
+      <article class="d-flex justify-content-center pb-3">
+        <section class="container d-flex flex-wrap justify-content-around align-items-center">
+          <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+            <img src="../../assets/img/peluches/baleine.jpg" alt="baleine" />
+            <div>
+              <p>Baleine, 22cm - 10 €</p>
+            </div>
+            <button type="submit" class="btn btn-secondary m-3"><a href="#"
+              class="link-dark linkunderline">Ajouter</a></button>
+          </div>
+        <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+          <img src="../../assets/img/peluches/trex.jpg" alt="diplo" />
+          <div>
+            <p>T-Rex, 45cm - 55 €</p>
+          </div>
+          <button type="submit" class="btn btn-secondary m-3"><a href="#"
+              class="link-dark linkunderline">Ajouter</a></button>
+        </div>
+        <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+          <img src="../../assets/img/peluches/lapin.jpg" alt="lapinnaissance" />
+          <div>
+            <p>Lapin de naissance - 20 €</p>
+          </div>
+          <button type="submit" class="btn btn-secondary m-3"><a href="#"
+              class="link-dark linkunderline">Ajouter</a></button>
+        </div>
+        <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+          <img src="../../assets/img/peluches/lapin2.jpg" alt="lapin" />
+          <div>
+            <p>Lapin câlin, 18cm - 20 €</p>
+          </div>
+          <form action="post">
+            <label for="figurine">Sélection du modèle :</label>
+            <select name="figurine" id="figurine" class="text-center">
+              <option value="--">- - -</option>
+              <option value="gris">Gris</option>
+              <option value="rouge">Rouge</option>
+              <option value="vert">Vert</option>
+              <option value="orange">Orange</option>
+            </select>
+          </form>
+          <button type="submit" class="btn btn-secondary m-3"><a href="#"
+              class="link-dark linkunderline">Ajouter</a></button>
+        </div>
+        <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+          <img src="../../assets/img/peluches/nounours.jpg" alt="nounours" />
+          <div>
+            <p>Nounours géant, 95cm - 80 €</p>
+          </div>
+          <button type="submit" class="btn btn-secondary m-3"><a href="#"
+              class="link-dark linkunderline">Ajouter</a></button>
+        </div>
+        <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
+          <img src="../../assets/img/peluches/plushes.jpg" alt="mouton" />
+          <div>
+            <p>Moutons tout doux, 35cm - 48 €</p>
+          </div>
+          <button type="submit" class="btn btn-secondary m-3"><a href="#"
+              class="link-dark linkunderline">Ajouter</a></button>
+          </div>
+        <div class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+          <img src="../../assets/img/peluches/sac_a_dos.jpg" alt="sac_a_dos" />
+          <div>
+            <p>Sac à dos - 35 €</p>
+          </div>
+          <form action="post">
+            <label for="sac_a_dos"></label>
+            <select name="sac_a_dos" id="sac_a_dos" class="text-center">
+              <option value="---">- - -</option>
+              <option value="Âne">Âne</option>
+              <option value="Vache">Vache</option>
+              <option value="Dragon">Dragon</option>
+              <option value="Cochon">Cochon</option>
+            </select>
+          </form>
+          <button type="submit" class="btn btn-secondary m-3"><a href="#"
+              class="link-dark linkunderline">Ajouter</a></button>
+        </div>
+        <div class="contenu contenu8 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+          <img src="../../assets/img/peluches/santa.jpg" alt="perenoel" />
+          <div>
+            <p>Père Noël, 9cm - 8 €</p>
+          </div>
+          <button type="submit" class="btn btn-secondary m-3"><a href="#"
+              class="link-dark linkunderline">Ajouter</a></button>
+        </div>
+        <div class="contenu contenu9 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+          <img src="../../assets/img/peluches/diplo2.jpg" alt="diplodocus" />
+          <div>
+            <p>Diplodocus, 45 cm - 55 €</p>
+          </div>
+          <button type="submit" class="btn btn-secondary m-3"><a href="#"
+              class="link-dark linkunderline">Ajouter</a></button>
+        </div>
+        </section>
+
+      </article>
+    </main>  
 
   <footer class="footer bg-info footer-expand-lg mt-3">
     <div class="d-flex justify-content-evenly align-items-center text-center">

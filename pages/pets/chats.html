@@ -86,23 +86,13 @@
 
   <main class="container-fluid">
     <article>
-      <section class="d-flex justify-content-center">
+      <section class="d-flex justify-content-center mb-3">
         <img src="../../assets/img/pets/cats/aheader.jpg" alt="cats" class="w-50 mb-3 rounded" />
       </section>
       <hr>
       <section class="d-flex justify-content-end mb-3 mt-3">
         <form action="post" class="pe-3 m-2 text-center">
-          <label for="nb">Nb d'article / page</label>
-          <select name="nb" id="nb" class="text-center">
-            <option value="---">- - -</option>
-            <option value="5">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-          </select>
-        </form>
-        <form action="post" class="pe-3 m-2 text-center">
-          <label for="tri">Trier par :</label>
+          <label for="tri">Trier :</label>
           <select name="tri" id="tri" class="text-center">
             <option value="---">- - -</option>
             <option value="€ croissant">€ croissant</option>
@@ -113,59 +103,68 @@
         </form>
       </section>
     </article>
+    
+        <!-- BLOC DE FILTRES -->
+    <!-- <aside class="contenu10">
+      <h3 class="text-center mt-3">Filtrer :</h3>
+      <section class="bloc2 d-flex flex-column m-3 p-3">
+        <h4>Prix</h4>
+        <div class="form-check">
+          <input type="checkbox" name="low" id="low" class="form-check-input" />
+          <label for="low" class="form-check-label">Jusqu'à 15 €</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" name="mid" id="mid" class="form-check-input" />
+          <label for="mid" class="form-check-label">De 15 € à 25 €</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" name="ok" id="ok" class="form-check-input" />
+          <label for="ok" class="form-check-label">De 25 € à 45 €</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" name="high" id="high" class="form-check-input" />
+          <label for="high" class="form-check-label">45 € et +</label>
+        </div>
+      </section>
+      <section class=" bloc2 d-flex flex-column m-3 p-3">
+        <h4>Marque :</h4>
+        <div class="form-check">
+          <input type="checkbox" name="Hachette" id="Hachette" class="form-check-input" />
+          <label for="Hachette" class="form-check-label">Hachette</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" name="Robotonics" id="Robotonics" class="form-check-input" />
+          <label for="Robotonics" class="form-check-label">Robotonics</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" name="Mattel" id="Mattel" class="form-check-input" />
+          <label for="Mattel" class="form-check-label">Mattel</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" name="Ty" id="Ty" class="form-check-input" />
+          <label for="Ty" class="form-check-label">Ty</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" name="DansLeCoin" id="DansLeCoin" class="form-check-input" />
+          <label for="DansLeCoin" class="form-check-label">DansLeCoin</label>
+        </div>
+      </section>
+      <section class=" bloc2 d-flex flex-column m-3 p-3">
+        <h4>Âge :</h4>
+        <div class="form-check">
+          <input type="checkbox" name="Ecole" id="Ecole" class="form-check-input">
+          <label for="Ecole" class="form-check-label">Ecole</label>
+        </div>
+        <div class="form-check">
+          <input type="checkbox" name="Collège" id="Collège" class="form-check-input">
+          <label for="Collège" class="form-check-label">Collège</label>
+        </div>
+      </section>
+    </aside> -->
 
-    <article class="container">
-      <aside class="contenu10">
-        <h3 class="text-center mt-3">Filtrer :</h3>
-        <section class="bloc2 d-flex flex-column m-3 p-3">
-          <h4>Prix</h4>
-          <div class="form-check">
-            <input type="checkbox" name="low" id="low" class="form-check-input" />
-            <label for="low" class="form-check-label">Jusqu'à 15 €</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="mid" id="mid" class="form-check-input" />
-            <label for="mid" class="form-check-label">De 15 € à 25 €</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="ok" id="ok" class="form-check-input" />
-            <label for="ok" class="form-check-label">De 25 € à 45 €</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="high" id="high" class="form-check-input" />
-            <label for="high" class="form-check-label">45 € et +</label>
-          </div>
-        </section>
-        <section class="bloc2 d-flex flex-column m-3 p-3">
-          <h4>Marque :</h4>
-          <div class="form-check">
-            <input type="checkbox" name="Liope" id="Liope" class="form-check-input" />
-            <label for="Liope" class="form-check-label">Liope</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="Home_made" id="Home_made" class="form-check-input" />
-            <label for="Home_made" class="form-check-label">Home made</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="Auchan" id="Auchan" class="form-check-input" />
-            <label for="Auchan" class="form-check-label">Auchan</label>
-          </div>
-        </section>
-        <section class="bloc2 d-flex flex-column m-3 p-3">
-          <h4>Usage :</h4>
-          <div class="form-check">
-            <input type="checkbox" name="Repos" id="Repos" class="form-check-input">
-            <label for="Repos" class="form-check-label">Repos</label>
-          </div>
-          <div class="form-check">
-            <input type="checkbox" name="Folie" id="Folie" class="form-check-input">
-            <label for="Folie" class="form-check-label">Folie</label>
-          </div>
-        </section>
-      </aside>
-
-      <section
-        class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
+    <article class="d-flex justify-content-center pb-3">
+      <section class="container d-flex flex-wrap justify-content-around align-items-center">
+        <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
         <img src="../../assets/img/pets/cats/arbre.jpg" alt="tree" />
         <div>
           <p>Arbre à chat, 80cm - 55 €</p>
@@ -181,52 +180,48 @@
         </form>
         <button type="submit" class="btn btn-warning m-3"><a href="#"
             class="link-dark linkunderline">Ajouter</a></button>
-      </section>
-      <section
-        class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
+        </div>
+        <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
         <img src="../../assets/img/pets/cats/cat-709013_1920.jpg" alt="jouets_nouriture" />
         <div>
           <p>Gamelle de réflexion - 20 €</p>
         </div>
         <button type="submit" class="btn btn-warning m-3"><a href="#"
             class="link-dark linkunderline">Ajouter</a></button>
-      </section>
-      <section
-        class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
+       </div>
+      <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
         <img src="../../assets/img/pets/cats/cat-toy-5669830_1920.jpg" alt="tige" />
         <div>
           <p>Tige à plumes - 6 €</p>
         </div>
         <button type="submit" class="btn btn-warning m-3"><a href="#"
             class="link-dark linkunderline">Ajouter</a></button>
-      </section>
-      <section
-        class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
+      </div>
+      <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
         <img src="../../assets/img/pets/cats/foam-balls-1236931_1920.jpg" alt="boules_à_plumes" />
         <div>
           <p>Boule à plume, coloris aléatoire - 5 €</p>
         </div>
         <button type="submit" class="btn btn-warning m-3"><a href="#"
             class="link-dark linkunderline">Ajouter</a></button>
-      </section>
-      <section
-        class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
+      </div>
+      <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
         <img src="../../assets/img/pets/cats/toy-5160980_1920.jpg" alt="souris" />
         <div>
           <p>Souris couinante, coloris aléatoire - 5 €</p>
         </div>
         <button type="submit" class="btn btn-warning m-3"><a href="#"
             class="link-dark linkunderline">Ajouter</a></button>
-      </section>
-      <section
-        class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center">
+      </div>
+      <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
         <img src="../../assets/img/pets/cats/tree.jpg" alt="catnip" />
         <div>
           <p>Peluche de Noël (avec herbe à chat) - 8 €</p>
         </div>
         <button type="submit" class="btn btn-warning m-3"><a href="#"
             class="link-dark linkunderline">Ajouter</a></button>
-      </section>
+      </div>
+    </section>
     </article>
   </main>
 

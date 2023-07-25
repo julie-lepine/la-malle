@@ -1,5 +1,9 @@
+.heartImg {
+    width: 3vh;
+}
+    
 /* TEXTES */
-main .title {
+main .title, .no-mobile {
     font-size: 1.5em;
     padding: 2% 5%;
     margin: 2%;
