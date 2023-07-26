@@ -185,18 +185,16 @@
             class="link-light linkunderline">Ajouter</a></button>
       </div>
       <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new">
-        <img src="../assets/img/board_games/dices.jpg" alt="dés" />
+        <img src="../assets/img/board_games/dice-6.jpg" alt="dés" id="diceImg"/>
         <div>
           <p>Dés - à p. de 5 €</p>
         </div>
         <form action="post">
           <label for="leash">Choix du nb de faces :</label>
           <select name="leash" id="dice" class="text-center">
-            <option value="---">- - -</option>
-            <option value="six">6 faces - 5 €</option>
-            <option value="douze">12 faces - 10 €</option>
-            <option value="trente">30 faces - 25 €</option>
-            <option value="soixante">60 faces - 40 €</option>
+            <option value="6" onclick="displayImg()">6 faces - 5 €</option>
+            <option value="20" onclick="displayImg()">20 faces - 25 €</option>
+            <option value="mix" onclick="displayImg()">Mix (3 à 40 faces) - 40 €</option>
           </select>
         </form>
         <button type="submit" class="btn btn-success mt-3"><a href="#"
@@ -211,18 +209,17 @@
             class="link-light linkunderline">Ajouter</a></button>
       </div>
       <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new">
-        <img src="../assets/img/board_games/puzzle.jpg" alt="puzzle" />
+        <img src="../assets/img/board_games/puzz-24.jpg" alt="puzzle" id="puzzImg"/>
         <div>
           <p>Puzzles - à p. de 10 €</p>
         </div>
         <form action="post">
           <label for="puzzle">Nb de pièces :</label>
-          <select name="puzzle" id="puzzle" class="text-center">
-            <option value="---">- - -</option>
-            <option value="100">100 pièces - 10 €</option>
-            <option value="500">500 pièces - 20 €</option>
-            <option value="1000">1000 pièces - 25 €</option>
-            <option value="2000">2000 pièces - 30 €</option>
+          <select name="puzzle" id="puzzleSelect" class="text-center">
+            <option value="24" onclick="displayImg()">24 pièces - 10 €</option>
+            <option value="100" onclick="displayImg()">100 pièces - 10 €</option>
+            <option value="500" onclick="displayImg()">500 pièces - 20 €</option>
+            <option value="1000" onclick="displayImg()">1000 pièces - 25 €</option>
           </select>
         </form>
         <button type="submit" class="btn btn-success mt-3"><a href="#"

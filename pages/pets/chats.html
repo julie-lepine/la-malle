@@ -163,17 +163,16 @@
     <article class="d-flex justify-content-center pb-3">
       <section class="container d-flex flex-wrap justify-content-around align-items-center">
         <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new">
-        <img src="../../assets/img/pets/cats/arbre.jpg" alt="tree" />
+        <img src="../../assets/img/pets/cats/tree-black.jpg" alt="tree" id="treeImg"/>
         <div>
           <p>Arbre à chat, 80cm - 55 €</p>
         </div>
         <form action="post">
           <label for="color">Choix couleur :</label>
-          <select name="color" id="color" class="text-center">
-            <option value="---">- - -</option>
-            <option value="Bleu">Bleu</option>
-            <option value="Rouge">Rouge</option>
-            <option value="Vert">Vert</option>
+          <select name="color" id="treeColor" class="text-center">
+            <option value="black" onclick="displayImg()">Noir</option>
+            <option value="brown" onclick="displayImg()">Marron</option>
+            <option value="red" onclick="displayImg()">Rouge</option>
           </select>
         </form>
         <button type="submit" class="btn btn-warning m-3"><a href="#"

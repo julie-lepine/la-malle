@@ -72,3 +72,15 @@ window.addEventListener('scroll', () => {
     logo.classList.add('resize');
 }
 });
+
+// FUNCTION TO DISPLAY THE IMAGE ON CLIC ON THE SELECT
+const figImg = document.getElementById("figImg");
+const figDivBtns = document.getElementById("figurine");
+
+const booksImg = document.getElementById("books");
+const booksDivBtns = document.getElementById("qty");
+
+function displayImg() {
+  figImg.src = `../../assets/img/teenagers/fig-${figDivBtns.value}.jpg`;
+  booksImg.src = `../../assets/img/teenagers/books-${booksDivBtns.value}.jpg`;
+}

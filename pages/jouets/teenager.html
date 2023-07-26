@@ -164,17 +164,16 @@
     <article class="d-flex justify-content-center pb-3">
       <section class="container d-flex flex-wrap justify-content-around align-items-center">
         <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo">
-          <img src="../../assets/img/teenagers/book.jpg" alt="books" />
+          <img src="../../assets/img/teenagers/books-1.jpg" alt="books" id="books"/>
           <div>
             <p>Sélection de livres - 10 €</p>
           </div>
           <form action="post">
             <label for="qty">Quantités :</label>
             <select name="qty" id="qty" class="text-center">
-              <option value="--">- - -</option>
-              <option value="1">Livre 1</option>
-              <option value="2">Livre 2</option>
-              <option value="3">Livre 3</option>
+              <option value="1" onclick="displayImg()">Livre 1</option>
+              <option value="2" onclick="displayImg()">Livre 2</option>
+              <option value="3" onclick="displayImg()">Livre 3</option>
             </select>
           </form>
           <button type="submit" class="btn btn-dark m-3"><a href="#"
@@ -197,18 +196,17 @@
             class="link-light linkunderline">Ajouter</a></button>
       </div>
       <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo">
-        <img src="../../assets/img/teenagers/figurines.jpg" alt="miniatures" />
+        <img src="../../assets/img/teenagers/fig-mario.jpg" alt="miniatures" id="figImg" />
         <div>
           <p>Figurines - à p. de 15 €</p>
         </div>
         <form action="post">
           <label for="figurine">Sélection du modèle :</label>
           <select name="figurine" id="figurine" class="text-center">
-            <option value="--">- - -</option>
-            <option value="Mario">Mario Jump, 10cm - 15 €</option>
-            <option value="MarioPeach">Mario & Peach, 12cm - 15 €</option>
-            <option value="Toad">Toad, 18cm - 24 €</option>
-            <option value="Waluigi">Waluigi, 35cm - 49 €</option>
+            <option value="mario" onclick="displayImg()">Mario, 12cm - 15 €</option>
+            <option value="luigi" onclick="displayImg()">Luigi, 12cm - 15 €</option>
+            <option value="mario2" onclick="displayImg()">Mario Jump, 10cm - 13 €</option>
+            <option value="mario3" onclick="displayImg()">Mario Lego, 20cm - 49 €</option>
           </select>
         </form>
         <button type="submit" class="btn  btn-dark m-3"><a href="#"
@@ -254,10 +252,10 @@
         <form action="post">
           <label for="skin">Votre type de peau : </label>
           <select name="skin" id="skin" class="text-center">
-            <option value="--">- - -</option>
+            <option>- - -</option>
             <option value="dry">Sèche</option>
             <option value="mixte">Mixte</option>
-            <option value="grasse">Grasse</option>
+            <option value="oily">Grasse</option>
           </select>
         </form>
         <button type="submit" class="btn  btn-dark m-3"><a href="#"

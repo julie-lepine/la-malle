@@ -189,18 +189,17 @@
               class="link-dark linkunderline">Ajouter</a></button>
         </div>
         <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
-          <img src="../../assets/img/peluches/lapin2.jpg" alt="lapin" />
+          <img src="../../assets/img/peluches/rab-grey.jpg" alt="lapin" id="rabbitsImg"/>
           <div>
             <p>Lapin câlin, 18cm - 20 €</p>
           </div>
           <form action="post">
-            <label for="figurine">Sélection du modèle :</label>
-            <select name="figurine" id="figurine" class="text-center">
-              <option value="--">- - -</option>
-              <option value="gris">Gris</option>
-              <option value="rouge">Rouge</option>
-              <option value="vert">Vert</option>
-              <option value="orange">Orange</option>
+            <label for="rabbits">Sélection du modèle :</label>
+            <select name="rabbits" id="rabbits" class="text-center">
+              <option value="grey" onclick="displayImg()">Gris</option>
+              <option value="brown" onclick="displayImg()">Marron</option>
+              <option value="white" onclick="displayImg()">Blanc</option>
+              <option value="pink" onclick="displayImg()">Rose</option>
             </select>
           </form>
           <button type="submit" class="btn btn-secondary m-3"><a href="#"
@@ -223,18 +222,18 @@
               class="link-dark linkunderline">Ajouter</a></button>
           </div>
         <div class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
-          <img src="../../assets/img/peluches/sac_a_dos.jpg" alt="sac_a_dos" />
+          <img src="../../assets/img/peluches/bag-cerf.jpg" alt="sac_a_dos" id="bagImg"/>
           <div>
             <p>Sac à dos - 35 €</p>
           </div>
           <form action="post">
-            <label for="sac_a_dos"></label>
-            <select name="sac_a_dos" id="sac_a_dos" class="text-center">
-              <option value="---">- - -</option>
-              <option value="Âne">Âne</option>
-              <option value="Vache">Vache</option>
-              <option value="Dragon">Dragon</option>
-              <option value="Cochon">Cochon</option>
+            <label for="bags"></label>
+            <select name="bags" id="bags" class="text-center">
+              <option value="cerf" onclick="displayImg()">Cerf</option>
+              <option value="fish" onclick="displayImg()">Poisson</option>
+              <option value="deer" onclick="displayImg()">Renne</option>
+              <option value="rabbit" onclick="displayImg()">Lapin</option>
+              <option value="cow" onclick="displayImg()">Vache</option>
             </select>
           </form>
           <button type="submit" class="btn btn-secondary m-3"><a href="#"
