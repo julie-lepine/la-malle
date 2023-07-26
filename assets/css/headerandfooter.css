@@ -19,7 +19,7 @@ nav ul li a:hover{
 /* LOGO ACTION ON SCROLL */
 #logo {
     height: 15svh;
-    transition: all 2s ease-out;
+    transition: all 1s ease-out;
 }
 
 /* ACTIONS ON SCROLL */ 

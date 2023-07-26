@@ -1,9 +1,5 @@
 "use strict";
 
-///////////////// PB SUR LE FILTRE : CA ADDITIONNE LES EXIGENCES DE FILTRE, IL FAUT FORCEMENT ALLER RESET EN CLIQUANT SUR "TOUT MONTRER" /////////////////
-
-// AJOUTER PLUS TARD LES FONCTIONS DE FILTRE : NB ARTICLES PAR PAGE, MARQUE, ETC
-
 //// UPPER IMAGE DISPPEARING ON SCROLL > 100
 window.addEventListener("scroll", () => {
   if (window.scrollY > 100) {
@@ -47,7 +43,7 @@ function filterPromo() {
 function filterSchool() {
   let contents = document.getElementsByClassName("contenu");
   for (let i = 0; i < contents.length; i++) {
-    if (!contents[i].classList.contains("school")) {
+    if (!contents[i].classList.contains("imitation")) {
       contents[i].classList.add("hide");
     } else {
         contents[i].classList.remove("hide");
@@ -55,13 +51,22 @@ function filterSchool() {
   }
 }
 
-function filterCollege() {
-  let contents = document.getElementsByClassName("contenu");
-  for (let i = 0; i < contents.length; i++) {
-    if (!contents[i].classList.contains("college")) {
-      contents[i].classList.add("hide");
-    } else {
-        contents[i].classList.remove("hide");
-      }
-  }
+// FUNCTION TO DISPLAY THE IMAGE ON CLIC ON THE SELECT
+const bricsImg = document.getElementById("bricsImg");
+const bricsDivBtns = document.getElementById("qty");
+
+const miniasImg = document.getElementById("miniasImg");
+const carsDivBtns = document.getElementById("cars");
+
+const dinosImg = document.getElementById("dinosImg");
+const dinosDivBtns = document.getElementById("dinos");
+
+const booksImg = document.getElementById("booksImg");
+const booksDivBtns = document.getElementById("books");
+
+function displayImg() {
+  bricsImg.src = `../../assets/img/kiddo/bric-${bricsDivBtns.value}.jpg`;
+  miniasImg.src = `../../assets/img/kiddo/car-${carsDivBtns.value}.jpg`;
+  dinosImg.src = `../../assets/img/kiddo/dinos-${dinosDivBtns.value}.jpg`;
+  booksImg.src = `../../assets/img/kiddo/books-${booksDivBtns.value}.jpg`;
 }

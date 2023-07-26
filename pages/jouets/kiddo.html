@@ -16,7 +16,7 @@
 </head>
 
 <body>
-  <header id="up" class="sticky-top">
+  <!-- <header id="up" class="sticky-top">
     <nav class="navbar bg-info navbar-expand-lg w-100">
       <a href="../../index.html" class="navbar-brand ms-2"><img src="../../assets/img/index/logo.jpg" alt="logo"
           class="rounded" id="logo" /></a>
@@ -81,12 +81,12 @@
       <li class="breadcrumb-item active" aria-current="page">
         Kiddos</li>
     </ol>
-  </nav>
+  </nav> -->
 
   <main class="container-fluid">
     <article>
       <section class="d-flex justify-content-center mb-3">
-        <img src="../../assets/img/kiddo/ahead.png" alt="kiddos" id="upperImg" class="w-50 mb-3 rounded" />
+        <!-- <img src="../../assets/img/kiddo/ahead.png" alt="kiddos" id="upperImg" class="w-50 mb-3 rounded" /> -->
       </section>
       <hr>
       <section class="d-flex justify-content-end mb-3 mt-3">
@@ -96,8 +96,7 @@
             <option value="showAll" class="btn active" onclick="filterAll()">Tout montrer</option>
             <option value="news" class="btn" onclick="filterNew()">Nouveautés</option>
             <option value="promotions" class="btn" onclick="filterPromo()">Promotions</option>
-            <option value="school" class="btn" onclick="filterSchool()">École</option>
-            <option value="collège" class="btn" onclick="filterCollege()">Collège</option>
+            <option value="imitation" class="btn" onclick="filterSchool()">Imitation</option>
           </select>
         </form>
       </section>
@@ -163,7 +162,7 @@
 
     <article class="d-flex justify-content-center pb-3">
       <section class="container d-flex flex-wrap justify-content-around align-items-center">
-        <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new school">
+        <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new imitation">
           <img src="../../assets/img/kiddo/barbie.jpg" alt="mannequin" />
           <div>
             <p>Poupées mannequin - 10 €</p>
@@ -171,24 +170,23 @@
           <button type="submit" class="btn btn-primary m-3"><a href="#" class="link-light linkunderline"><a
                 href="#" class="link-light linkunderline">Ajouter</a></a></button>
         </div>
-        <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv school college">
-          <img src="../../assets/img/kiddo/lego.jpg" alt="lego" />
+        <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+          <img src="../../assets/img/kiddo/bric-30.jpg" alt="lego" id="bricsImg"/>
           <div>
             <p>Briques en plastique - à p. de 10 €</p>
           </div>
           <form action="post">
             <label for="qty">Quantités :</label>
             <select name="qty" id="qty" class="text-center">
-              <option value="--">- - -</option>
-              <option value="30">Lot de 30 briques</option>
-              <option value="40">Lot de 40 briques</option>
-              <option value="50">Lot de 50 briques</option>
+              <option value="30" onclick="displayImg()">Lot de 30 briques</option>
+              <option value="40" onclick="displayImg()">Lot de 40 briques</option>
+              <option value="50" onclick="displayImg()">Lot de 50 briques</option>
             </select>
           </form>
           <button type="submit" class="btn btn-primary m-3"><a href="#"
               class="link-light linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv school">
+        <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv ">
           <img src="../../assets/img/kiddo/marbles-3070512_1920.jpg" alt="billes" />
           <div>
             <p>Sac de billes - 10 €</p>
@@ -196,25 +194,24 @@
           <button type="submit" class="btn btn-primary m-3"><a href="#"
               class="link-light linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new school">
-          <img src="../../assets/img/kiddo/police-car-2672366_1920.png" alt="miniatures" />
+        <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new imitation">
+          <img src="../../assets/img/kiddo/police-car-2672366_1920.png" alt="miniatures" id="miniasImg"/>
           <div>
             <p>Véhicules miniatures - à p. de 8 €</p>
           </div>
           <form action="post">
             <label for="cars">Sélection du modèle :</label>
             <select name="cars" id="cars" class="text-center">
-              <option value="--">- - -</option>
-              <option value="Police">Police, 8cm - 8 €</option>
-              <option value="fire">Pompiers, 20cm - 15 €</option>
-              <option value="garbage">Eboueurs, 22cm - 17€</option>
-              <option value="construction">Grue, 35cm - 39 €</option>
+              <option value="police" onclick="displayImg()">Police, 8cm - 8 €</option>
+              <option value="fire" onclick="displayImg()">Pompiers, 20cm - 15 €</option>
+              <option value="travel" onclick="displayImg()">Mini Van, 22cm - 17€</option>
+              <option value="construction" onclick="displayImg()">Grue, 35cm - 39 €</option>
             </select>
           </form>
           <button type="submit" class="btn btn-primary m-3"><a href="#"
               class="link-light linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv school">
+        <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv imitation">
           <img src="../../assets/img/kiddo/toy-shopping-cart-942362_1920.jpg" alt="imitation" />
           <div>
             <p>Caddie de marché - 25 €</p>
@@ -222,7 +219,7 @@
           <button type="submit" class="btn btn-primary m-3"><a href="#"
               class="link-light linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv school college">
+        <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
           <img src="../../assets/img/kiddo/soft-toy-830420_1920.jpg" alt="peluche" />
           <div>
             <p>Sélection de peluches à moins de 20 €</p>
@@ -230,25 +227,23 @@
           <button type="submit" class="btn btn-primary m-3"><a href="/pages/jouets/peluches.html"
               class="link-light linkunderline">Aller</a></button>
         </div>
-        <div class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo school">
-          <img src="../../assets/img/kiddo/tyrannosaurus.jpg" alt="animaux" />
+        <div class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo ">
+          <img src="../../assets/img/kiddo/dinos-trex.jpg" alt="animaux" id="dinosImg"/>
           <div>
-            <p>Animaux 10 cm, divers - 5 €</p>
+            <p>Dinosaures 10 cm, divers - 5 €</p>
           </div>
           <form action="post">
             <label for="dinos">Sélection du modèle :</label>
             <select name="dinos" id="dinos" class="text-center">
-              <option value="--">- - -</option>
-              <option value="T-Rex">T-Rex</option>
-              <option value="Diplodocus">Diplodocus</option>
-              <option value="Ptérodactile">Ptérodactile</option>
-              <option value="Tricératops">Tricératops</option>
+              <option value="trex" onclick="displayImg()">T-Rex</option>
+              <option value="diplo" onclick="displayImg()">Diplodocus</option>
+              <option value="tricera" onclick="displayImg()">Tricératops</option>
             </select>
           </form>
           <button type="submit" class="btn btn-primary m-3"><a href="#"
               class="link-light linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu8 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo college">
+        <div class="contenu contenu8 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo ">
           <img src="../../assets/img/kiddo/ahead-Copie.png" alt="robots" />
           <div>
             <p>Mon poto le robot - 25 €</p>
@@ -256,18 +251,17 @@
           <button type="submit" class="btn btn-primary m-3"><a href="#"
               class="link-light linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu9 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv school college">
-          <img src="../../assets/img/kiddo/livres-coucher-enfant.png" alt="livres" />
+        <div class="contenu contenu9 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv school ">
+          <img src="../../assets/img/kiddo/livres-coucher-enfant.png" alt="livres" id="booksImg"/>
           <div>
             <p>Sélection de livres - 10 €</p>
           </div>
           <form action="post">
             <label for="books">Sélection du livre : </label>
             <select name="book" id="books" class="text-center">
-              <option value="--">- - -</option>
-              <option value="un">Livre 1</option>
-              <option value="deux">Livre 2</option>
-              <option value="trois">Livre 3</option>
+              <option value="1" onclick="displayImg()">Livre 1</option>
+              <option value="2" onclick="displayImg()">Livre 2</option>
+              <option value="3" onclick="displayImg()">Livre 3</option>
             </select>
           </form>
           <button type="submit" class="btn btn-primary m-3"><a href="#"

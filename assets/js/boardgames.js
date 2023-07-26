@@ -6,7 +6,7 @@ function filterAll() {
   for (let i = 0; i < contents.length; i++) {
       if (contents[i].classList.contains('contenu')) {
           contents[i].classList.remove('hide');
-      }       
+      }      
   }
 }
 
@@ -35,7 +35,7 @@ function filterPromo() {
 //// UPPER IMAGE DISPPEARING ON SCROLL > 100 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 100) {
-    let logo = document.getElementById('logo');
-    logo.classList.add('resize');
-}
+      let logo = document.getElementById('logo');
+      logo.classList.add('resize');
+  }
 });
