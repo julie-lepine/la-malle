@@ -66,7 +66,11 @@ const booksDivBtns = document.getElementById("books");
 
 function displayImg() {
   bricsImg.src = `../../assets/img/kiddo/bric-${bricsDivBtns.value}.jpg`;
-  miniasImg.src = `../../assets/img/kiddo/car-${carsDivBtns.value}.jpg`;
   dinosImg.src = `../../assets/img/kiddo/dinos-${dinosDivBtns.value}.jpg`;
   booksImg.src = `../../assets/img/kiddo/books-${booksDivBtns.value}.jpg`;
+}
+
+function displayCarsImg() {
+  miniasImg.src = `../../assets/img/kiddo/car-${carsDivBtns.value}.jpg`;
+
 }
