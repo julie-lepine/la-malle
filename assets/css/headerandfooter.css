@@ -16,6 +16,17 @@ nav ul li a:hover{
     background: #91d4ec58;
 }
 
+/* LOGO ACTION ON SCROLL */
+#logo {
+    height: 15svh;
+    transition: all 2s ease-out;
+}
+
+/* ACTIONS ON SCROLL */ 
+.resize {
+    height: 5vh!important;
+}
+
 /* BORDURES DES BLOCS DE FILTRE PAGES PRODUITS */
 .bloc2 { 
     border: dotted rgb(199, 197, 197);
@@ -42,7 +53,7 @@ nav ul li a:hover{
 
 /* FOOTER */
 footer div {
-    height: 20vh;
+    height: 10vh;
 }
 
 /* UP BUTTON */

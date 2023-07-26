@@ -1,9 +1,3 @@
 .contenu {
     border: solid rgb(228, 179, 224);
 }
-
-/* faire le responsive */ 
-
-.hide {
-    display: none!important;
-}

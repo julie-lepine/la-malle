@@ -46,7 +46,7 @@ function filterAccess() {
 //// UPPER IMAGE DISPPEARING ON SCROLL > 100 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 100) {
-      let image = document.getElementById('upperImg');
-      image.classList.add('hide');
-  }
+    let logo = document.getElementById('logo');
+    logo.classList.add('resize');
+}
 });
