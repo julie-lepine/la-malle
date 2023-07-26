@@ -2,9 +2,16 @@
     border: solid rgb(241, 239, 93);
 }
 
-/* faire le responsive */ 
+#logo {
+    height: 15svh;
+}
+
+/* ACTIONS ON SCROLL */ 
 
 .hide {
     display: none!important;
 }
 
+.resize {
+    height: 5vh;
+}

@@ -6,7 +6,7 @@ function filterAll() {
   for (let i = 0; i < contents.length; i++) {
       if (contents[i].classList.contains('contenu')) {
           contents[i].classList.remove('hide');
-      }        
+      }       
   }
 }
 
@@ -15,6 +15,8 @@ function filterNew() {
   for (let i = 0; i < contents.length; i++) {
       if (!contents[i].classList.contains("new")) {
           contents[i].classList.add("hide");
+      } else {
+        contents[i].classList.remove("hide");
       }
   }
 }
@@ -24,6 +26,8 @@ function filterPromo() {
   for (let i = 0; i < contents.length; i++) {
       if (!contents[i].classList.contains("promo")) {
           contents[i].classList.add("hide");
+      } else {
+        contents[i].classList.remove("hide");
       }
   }
 }

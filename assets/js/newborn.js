@@ -15,6 +15,8 @@ function filterNew() {
   for (let i = 0; i < contents.length; i++) {
       if (!contents[i].classList.contains("new")) {
           contents[i].classList.add("hide");
+      } else {
+        contents[i].classList.remove("hide");
       }
   }
 }
@@ -24,6 +26,8 @@ function filterPromo() {
   for (let i = 0; i < contents.length; i++) {
       if (!contents[i].classList.contains("promo")) {
           contents[i].classList.add("hide");
+      } else {
+        contents[i].classList.remove("hide");
       }
   }
 }
@@ -33,6 +37,8 @@ function filterMotricity() {
   for (let i = 0; i < contents.length; i++) {
       if (!contents[i].classList.contains("motricity")) {
           contents[i].classList.add("hide");
+      } else {
+        contents[i].classList.remove("hide");
       }
   }
 }
@@ -42,6 +48,8 @@ function filterComfort() {
   for (let i = 0; i < contents.length; i++) {
       if (!contents[i].classList.contains("comfort")) {
           contents[i].classList.add("hide");
+      } else {
+        contents[i].classList.remove("hide");
       }
   }
 }

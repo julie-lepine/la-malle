@@ -15,6 +15,8 @@ function filterNew() {
   for (let i = 0; i < contents.length; i++) {
       if (!contents[i].classList.contains("new")) {
           contents[i].classList.add("hide");
+      } else {
+        contents[i].classList.remove("hide");
       }
   }
 }
@@ -24,6 +26,8 @@ function filterPromo() {
   for (let i = 0; i < contents.length; i++) {
       if (!contents[i].classList.contains("promo")) {
           contents[i].classList.add("hide");
+      } else {
+        contents[i].classList.remove("hide");
       }
   }
 }
@@ -33,6 +37,8 @@ function filterTen() {
   for (let i = 0; i < contents.length; i++) {
       if (!contents[i].classList.contains("ten")) {
           contents[i].classList.add("hide");
+      } else {
+        contents[i].classList.remove("hide");
       }
   }
 }
@@ -42,6 +48,8 @@ function filterFourty() {
   for (let i = 0; i < contents.length; i++) {
       if (!contents[i].classList.contains("fourty")) {
           contents[i].classList.add("hide");
+      } else {
+        contents[i].classList.remove("hide");
       }
   }
 }
@@ -51,6 +59,8 @@ function filterSeasoned() {
   for (let i = 0; i < contents.length; i++) {
       if (!contents[i].classList.contains("season")) {
           contents[i].classList.add("hide");
+      } else {
+        contents[i].classList.remove("hide");
       }
   }
 }
