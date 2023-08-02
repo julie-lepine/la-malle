@@ -14,6 +14,11 @@
   <link rel="shortcut icon" href="../../assets/img/face-grin-hearts-solid.svg" type="image/x-icon" />
   <title>Teens - La Malle</title>
   <meta type="description" content="La Malle, concept-store de jouets en tous genre et, surtout, non genrés !">
+  <style>
+    .contenu {
+    border: solid rgb(168, 168, 168);
+    }
+  </style>
 </head>
 
 <body>
@@ -94,7 +99,7 @@
           <select name="tri" id="tri" class="text-center">
             <option value="all" class="btn active" onclick="showAll()">Tout montrer</option>
             <option value="ascend" class="btn" onclick="sortAscending()">Prix croissant</option>
-            <option value="descend" class="btn" onclick="filterDescending()">Prix décroissant</option>
+            <option value="descend" class="btn" onclick="sortDescending()">Prix décroissant</option>
           </select>
         </form>
       </section>

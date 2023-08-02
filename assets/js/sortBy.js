@@ -14,10 +14,7 @@ function sortAscending() {
 
 }
 
-function filterDescending() {
+function sortDescending() {
 
 }
 
-// récupérer genre les noms des classes et boucler dedans pour les trier ? 
-// abc.. ça peut être avec le .textContent
-// prix ? 
