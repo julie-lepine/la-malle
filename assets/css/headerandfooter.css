@@ -46,6 +46,11 @@ nav ul li a:hover{
     width: 40%;
 }
 
+/* ARTICLES FILTER */
+.hide {
+    display: none!important;
+}
+
 /* UNDERLINE DES LIENS PANIER */
 .linkunderline {
     text-decoration: none;

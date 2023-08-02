@@ -10,3 +10,6 @@ X - MODIFIER LES PHOTOS A LA SELECTION DU SELECT
 
 
 ------ !!!!!!!!!!! LE FILTRE DEJA PRESENT BUG GRRRR
+
+- filtrer dans le discover (bloc rouge) -> problablement la même chose que les autres en enlevant le else afin que les critères s'additionnent
+----> ne pass enlever le else pour le filtre "nouveauté promos etc"
