@@ -91,78 +91,56 @@
       <hr>
       <section class="d-flex justify-content-end mb-3 mt-3">
         <form action="post" class="pe-3 m-2 text-center">
-          <label for="tri">Filtrer :</label>
+          <label for="tri">Trier par :</label>
           <select name="tri" id="tri" class="text-center">
-            <option value="showAll" class="btn active" onclick="filterAll()">Tout montrer</option>
-            <option value="news" class="btn" onclick="filterNew()">Nouveautés</option>
-            <option value="promotions" class="btn" onclick="filterPromo()">Promotions</option>
-            <option value="imitation" class="btn" onclick="filterSchool()">Imitation</option>
+            <option value="all" class="btn active" onclick="showAll()">Tout montrer</option>
+            <option value="ascend" class="btn" onclick="sortAscending()">Prix croissant</option>
+            <option value="descend" class="btn" onclick="filterDescending()">Prix décroissant</option>
           </select>
         </form>
       </section>
     </article>
 
+    <!-- imitation -->
+    <div class="d-flex">
     <!-- BLOC DE FILTRES -->
-    <!-- <aside class="contenu10">
+    <aside class="contenu10 w-25">
       <h3 class="text-center mt-3">Filtrer :</h3>
       <section class="bloc2 d-flex flex-column m-3 p-3">
         <h4>Prix</h4>
         <div class="form-check">
-          <input type="checkbox" name="low" id="low" class="form-check-input" />
-          <label for="low" class="form-check-label">Jusqu'à 15 €</label>
+          <input type="checkbox" name="low" id="low" class="form-check-input" onchange="filterPriceLow()"/>
+          <label for="low" class="form-check-label">Jusqu'à 10 €</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="mid" id="mid" class="form-check-input" />
-          <label for="mid" class="form-check-label">De 15 € à 25 €</label>
+          <input type="checkbox" name="med" id="med" class="form-check-input" onchange="filterPriceMed()"/>
+          <label for="med" class="form-check-label">De 10 € à 20 €</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="ok" id="ok" class="form-check-input" />
-          <label for="ok" class="form-check-label">De 25 € à 45 €</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="high" id="high" class="form-check-input" />
-          <label for="high" class="form-check-label">45 € et +</label>
+          <input type="checkbox" name="high" id="high" class="form-check-input" onchange="filterPriceHigh()"/>
+          <label for="high" class="form-check-label">20 € et +</label>
         </div>
       </section>
       <section class=" bloc2 d-flex flex-column m-3 p-3">
-        <h4>Marque :</h4>
+        <h4>Produit :</h4>
         <div class="form-check">
-          <input type="checkbox" name="Hachette" id="Hachette" class="form-check-input" />
-          <label for="Hachette" class="form-check-label">Hachette</label>
+          <input type="checkbox" name="new" id="new" class="form-check-input" onchange="filterNew()"/>
+          <label for="new" class="form-check-label">Nouveautés</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="Robotonics" id="Robotonics" class="form-check-input" />
-          <label for="Robotonics" class="form-check-label">Robotonics</label>
+          <input type="checkbox" name="promo" id="promo" class="form-check-input" onchange="filterPromo()"/>
+          <label for="promo" class="form-check-label">Promotions</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="Mattel" id="Mattel" class="form-check-input" />
-          <label for="Mattel" class="form-check-label">Mattel</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="Ty" id="Ty" class="form-check-input" />
-          <label for="Ty" class="form-check-label">Ty</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="DansLeCoin" id="DansLeCoin" class="form-check-input" />
-          <label for="DansLeCoin" class="form-check-label">DansLeCoin</label>
+          <input type="checkbox" name="imitation" id="imitation" class="form-check-input" onchange="filterImitation()"/>
+          <label for="imitation" class="form-check-label">Imitation</label>
         </div>
       </section>
-      <section class=" bloc2 d-flex flex-column m-3 p-3">
-        <h4>Âge :</h4>
-        <div class="form-check">
-          <input type="checkbox" name="Ecole" id="Ecole" class="form-check-input">
-          <label for="Ecole" class="form-check-label">Ecole</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="Collège" id="Collège" class="form-check-input">
-          <label for="Collège" class="form-check-label">Collège</label>
-        </div>
-      </section>
-    </aside> -->
+    </aside>
 
     <article class="d-flex justify-content-center pb-3">
       <section class="container d-flex flex-wrap justify-content-around align-items-center">
-        <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new imitation">
+        <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new imitation low">
           <img src="../../assets/img/kiddo/barbie.jpg" alt="mannequin" />
           <div>
             <p>Poupées mannequin - 10 €</p>
@@ -170,7 +148,7 @@
           <button type="submit" class="btn btn-primary m-3"><a href="#" class="link-light linkunderline"><a
                 href="#" class="link-light linkunderline">Ajouter</a></a></button>
         </div>
-        <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+        <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv med">
           <img src="../../assets/img/kiddo/bric-30.jpg" alt="lego" id="bricsImg"/>
           <div>
             <p>Briques en plastique - à p. de 10 €</p>
@@ -186,7 +164,7 @@
           <button type="submit" class="btn btn-primary m-3"><a href="#"
               class="link-light linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv ">
+        <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv low">
           <img src="../../assets/img/kiddo/marbles-3070512_1920.jpg" alt="billes" />
           <div>
             <p>Sac de billes - 10 €</p>
@@ -194,7 +172,7 @@
           <button type="submit" class="btn btn-primary m-3"><a href="#"
               class="link-light linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new imitation">
+        <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new imitation low">
           <img src="../../assets/img/kiddo/car-police.jpg" alt="miniatures" id="miniasImg"/>
           <div>
             <p>Véhicules miniatures - à p. de 8 €</p>
@@ -211,7 +189,7 @@
           <button type="submit" class="btn btn-primary m-3"><a href="#"
               class="link-light linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv imitation">
+        <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv imitation high">
           <img src="../../assets/img/kiddo/toy-shopping-cart-942362_1920.jpg" alt="imitation" />
           <div>
             <p>Caddie de marché - 25 €</p>
@@ -219,7 +197,7 @@
           <button type="submit" class="btn btn-primary m-3"><a href="#"
               class="link-light linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+        <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv med">
           <img src="../../assets/img/kiddo/soft-toy-830420_1920.jpg" alt="peluche" />
           <div>
             <p>Sélection de peluches à moins de 20 €</p>
@@ -252,13 +230,13 @@
               class="link-light linkunderline">Ajouter</a></button>
         </div>
         <div class="contenu contenu9 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv school ">
-          <img src="../../assets/img/kiddo/books-1.jpg" alt="livres" id="booksImg"/>
+          <img src="../../assets/img/kiddo/books-1.jpg" alt="livres" id="kidsBooksImg"/>
           <div>
             <p>Sélection de livres - 10 €</p>
           </div>
           <form action="post">
             <label for="books">Sélection du livre : </label>
-            <select name="book" id="books" class="text-center">
+            <select name="book" id="kidsBooks" class="text-center">
               <option value="1" onclick="displayImg()">Livre 1</option>
               <option value="2" onclick="displayImg()">Livre 2</option>
               <option value="3" onclick="displayImg()">Livre 3</option>
@@ -269,6 +247,7 @@
         </div>
       </section>
     </article>
+  </div>
   </main>
 
   <footer class="footer bg-info footer-expand-lg mt-3">
@@ -293,7 +272,11 @@
     <a href="#up"><img src="../../assets/img/index/up.png" alt="up button" class="up" /></a>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../../assets/js/kiddos.js"></script>
+  <script src="../../assets/js/filterBy.js"></script>
+  <script src="../../assets/js/displayHeader.js"></script>
+  <!-- <script src="../../assets/js/sortBy.js"></script> -->
+  <script src="../../assets/js/displayPdtsOnSelect.js"></script>
+  <script src="../../assets/js/displayPdtsOnSelect/kids.js"></script>
 
 </body>
 

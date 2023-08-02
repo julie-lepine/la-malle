@@ -92,114 +92,95 @@
       <hr>
       <section class="d-flex justify-content-end mb-3 mt-3">
         <form action="post" class="pe-3 m-2 text-center">
-          <label for="tri">Filtrer :</label>
+          <label for="tri">Trier par :</label>
           <select name="tri" id="tri" class="text-center">
-            <option value="---" class="btn active" onclick="filterAll()">Tout montrer</option>
-            <option value="news" class="btn" onclick="filterNew()">Nouveautés</option>
-            <option value="promotions" class="btn" onclick="filterPromo()">Promotions</option>
-            <option value="motricity" class="btn" onclick="filterMotricity()">Motricité</option>
-            <option value="comfort" class="btn" onclick="filterComfort()">Réconfort</option>
+            <option value="all" class="btn active" onclick="showAll()">Tout montrer</option>
+            <option value="ascend" class="btn" onclick="sortAscending()">Prix croissant</option>
+            <option value="descend" class="btn" onclick="filterDescending()">Prix décroissant</option>
           </select>
         </form>
       </section>
     </article>
     
     <!-- BLOC DE FILTRES -->
-    <!-- <aside class="contenu10">
+<!-- news promo motricité réconfort -->
+    <div class="d-flex">
+    <aside class="contenu10 w-25">
       <h3 class="text-center mt-3">Filtrer :</h3>
       <section class="bloc2 d-flex flex-column m-3 p-3">
         <h4>Prix</h4>
         <div class="form-check">
-          <input type="checkbox" name="low" id="low" class="form-check-input" />
+          <input type="checkbox" name="low" id="low" class="form-check-input" onchange="filterPriceLow()"/>
           <label for="low" class="form-check-label">Jusqu'à 15 €</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="mid" id="mid" class="form-check-input" />
-          <label for="mid" class="form-check-label">De 15 € à 25 €</label>
+          <input type="checkbox" name="med" id="med" class="form-check-input" onchange="filterPriceMed()"/>
+          <label for="med" class="form-check-label">De 15 € à 30 €</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="ok" id="ok" class="form-check-input" />
-          <label for="ok" class="form-check-label">De 25 € à 45 €</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="high" id="high" class="form-check-input" />
-          <label for="high" class="form-check-label">45 € et +</label>
+          <input type="checkbox" name="high" id="high" class="form-check-input" onchange="filterPriceHigh()"/>
+          <label for="high" class="form-check-label">30 € et +</label>
         </div>
       </section>
       <section class=" bloc2 d-flex flex-column m-3 p-3">
-        <h4>Marque :</h4>
+        <h4>Produit :</h4>
         <div class="form-check">
-          <input type="checkbox" name="Hachette" id="Hachette" class="form-check-input" />
-          <label for="Hachette" class="form-check-label">Hachette</label>
+          <input type="checkbox" name="new" id="new" class="form-check-input" onchange="filterNew()"/>
+          <label for="new" class="form-check-label">Nouveautés</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="Robotonics" id="Robotonics" class="form-check-input" />
-          <label for="Robotonics" class="form-check-label">Robotonics</label>
+          <input type="checkbox" name="promo" id="promo" class="form-check-input" onchange="filterPromo()"/>
+          <label for="promo" class="form-check-label">Promotions</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="Mattel" id="Mattel" class="form-check-input" />
-          <label for="Mattel" class="form-check-label">Mattel</label>
+          <input type="checkbox" name="motricity" id="motricity" class="form-check-input" onchange="filterMotricity()" />
+          <label for="motricity" class="form-check-label">Motricité</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="Ty" id="Ty" class="form-check-input" />
-          <label for="Ty" class="form-check-label">Ty</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="DansLeCoin" id="DansLeCoin" class="form-check-input" />
-          <label for="DansLeCoin" class="form-check-label">DansLeCoin</label>
+          <input type="checkbox" name="comfort" id="comfort" class="form-check-input" onchange="filterComfort()" />
+          <label for="comfort" class="form-check-label">Réconfort</label>
         </div>
       </section>
-      <section class=" bloc2 d-flex flex-column m-3 p-3">
-        <h4>Âge :</h4>
-        <div class="form-check">
-          <input type="checkbox" name="Ecole" id="Ecole" class="form-check-input">
-          <label for="Ecole" class="form-check-label">Ecole</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="Collège" id="Collège" class="form-check-input">
-          <label for="Collège" class="form-check-label">Collège</label>
-        </div>
-      </section>
-    </aside> -->
+    </aside>
 
     <article class="d-flex justify-content-center pb-3">
       <section class="container d-flex flex-wrap justify-content-around align-items-center">
-      <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv filterDiv motricity">
+      <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv filterDiv motricity low">
         <img src="../../assets/img/babies/baby.jpg" alt="book" class="image" />
         <div>
           <p>Livre à toucher - 10 €</p>
         </div>
         <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv motricity">
+      <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv motricity med">
         <img src="../../assets/img/babies/bb.jpg" alt="elec" />
         <div>
           <p>Jouet électronique - 20 €</p>
         </div>
         <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new motricity">
+      <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new motricity high">
         <img src="../../assets/img/babies/bobby-car.jpg" alt="voiture" />
         <div>
           <p>Triporteur - 30 €</p>
         </div>
         <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv motricity">
+      <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv motricity med">
         <img src="../../assets/img/babies/child-2293839_1920.jpg" alt="cubes" />
         <div>
           <p>Les 25 cubes en bois - 20 €</p>
         </div>
         <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new comfort">
+      <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new comfort low">
         <img src="../../assets/img/babies/crib-mobile-2654734_1920.jpg" alt="mobile" />
         <div>
           <p>Mobile en bois - 10 €</p>
         </div>
         <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
       </div>
-      <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo comfort"
+      <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo comfort med"
         id="peluches">
         <img src="../../assets/img/babies/plushes.jpg" alt="peluche" />
         <div>
@@ -208,7 +189,7 @@
         <button type="submit" class="btn btn-info m-3"><a href="/pages/jouets/peluches.html"
             class="link-dark linkunderline">Aller</a></button>
         </div>
-      <div class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new">
+      <div class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new high">
         <img src="../../assets/img/babies/seances_photo.jpg" alt="photo" />
         <div>
           <p>Offrez une séance photo à thème ! (à p. de 50 €)</p>
@@ -217,6 +198,7 @@
       </div>
     </section>
     </article>
+  </div>
   </main>
 
   <footer class="footer bg-info footer-expand-lg mt-3">
@@ -241,7 +223,10 @@
     <a href="#up"><img src="../../assets/img/index/up.png" alt="up button" class="up" /></a>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../../assets/js/newborn.js"></script>
+  <script src="../../assets/js/filterBy.js"></script>
+  <script src="../../assets/js/displayHeader.js"></script>
+  <!-- <script src="../../assets/js/sortBy.js"></script> -->
+  <script src="../../assets/js/displayPdtsOnSelect.js"></script>
 
 </body>
 

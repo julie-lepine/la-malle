@@ -1,15 +1,14 @@
 - AFFICHER DIV OU MODAL ARRIVE A TEL NIVEAU DE SCROLL POUR DIRE HEY INSCRIS TOI A LA NEWSLETTER T AURAS DES REDUCS
 - REFAIRE PAGE ACCUEIL
-- FILTRER PAR MARQUE, ETC (PEUT ETRE EN CREANT UN OBJET DE CHAQUE PRODUIT ET EN BOUCLANT POUR AFFICHER LES OBJETS (RELIES A UN NOEUD HTML) SELON UN DES PARAM DE L OBJET GENRE FOR (I BLAA BLA) { IF (!OBJET.PARAM === "MATTEL") { AJOUTER LA CLASSE }})
+x - FILTRER PAR MARQUE, ETC
+- TRIER PAR PRIX CROISSANT / DECROISSANT
 X - LA DISPRAITION DE L'UPPER IMG EST MOCHE - A FIXER
 X - MODIFIER LES PHOTOS A LA SELECTION DU SELECT
 - FINIR IDEES CADEAUX UNE FOIS TOUTES LES ACTIONS AU CLIC SONT REGLEES
+- filtrer dans le discover (bloc rouge) -> problablement la même chose que les autres en enlevant le else afin que les critères s'additionnent
+----> ne pass enlever le else pour le filtre "nouveauté promos etc"
 - RESPONSIVE
 
 - AJOUTER PANIER / COMPTE
 
-
------- !!!!!!!!!!! LE FILTRE DEJA PRESENT BUG GRRRR
-
-- filtrer dans le discover (bloc rouge) -> problablement la même chose que les autres en enlevant le else afin que les critères s'additionnent
-----> ne pass enlever le else pour le filtre "nouveauté promos etc"
+- ajouter icones "new", "promo", 

@@ -90,87 +90,71 @@
       <hr>
       <section class="d-flex justify-content-end mb-3 mt-3">
         <form action="post" class="pe-3 m-2 text-center">
-          <label for="tri">Filtrer :</label>
+          <label for="tri">Trer par :</label>
           <select name="tri" id="tri" class="text-center">
-            <option value="---" class="btn active" onclick="filterAll()">Tout montrer</option>
-            <option value="news" class="btn" onclick="filterNew()">Nouveautés</option>
-            <option value="promotions" class="btn" onclick="filterPromo()">Promotions</option>
-            <option value="pamper" class="btn" onclick="filterPamper()">Soins</option>
-            <option value="goOut" class="btn" onclick="filterGoOut()">Sorties</option>
-            <option value="tech" class="btn" onclick="filterTech()">Technologies</option>
+            <option value="all" class="btn active" onclick="showAll()">Tout montrer</option>
+            <option value="ascend" class="btn" onclick="sortAscending()">Prix croissant</option>
+            <option value="descend" class="btn" onclick="filterDescending()">Prix décroissant</option>
           </select>
         </form>
       </section>
     </article>
 
+    <!-- soins - sorties - tech -->
+    <div class="d-flex">
         <!-- BLOC DE FILTRES -->
-    <!-- <aside class="contenu10">
+    <aside class="contenu10 w-25">
       <h3 class="text-center mt-3">Filtrer :</h3>
       <section class="bloc2 d-flex flex-column m-3 p-3">
         <h4>Prix</h4>
         <div class="form-check">
-          <input type="checkbox" name="low" id="low" class="form-check-input" />
+          <input type="checkbox" name="low" id="low" class="form-check-input" onchange="filterPriceLow()"/>
           <label for="low" class="form-check-label">Jusqu'à 15 €</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="mid" id="mid" class="form-check-input" />
-          <label for="mid" class="form-check-label">De 15 € à 25 €</label>
+          <input type="checkbox" name="med" id="med" class="form-check-input" onchange="filterPriceMed()"/>
+          <label for="med" class="form-check-label">De 15 € à 30 €</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="ok" id="ok" class="form-check-input" />
-          <label for="ok" class="form-check-label">De 25 € à 45 €</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="high" id="high" class="form-check-input" />
-          <label for="high" class="form-check-label">45 € et +</label>
+          <input type="checkbox" name="high" id="high" class="form-check-input" onchange="filterPriceHigh()"/>
+          <label for="high" class="form-check-label">50 € et +</label>
         </div>
       </section>
       <section class=" bloc2 d-flex flex-column m-3 p-3">
-        <h4>Marque :</h4>
+        <h4>Produit :</h4>
         <div class="form-check">
-          <input type="checkbox" name="Hachette" id="Hachette" class="form-check-input" />
-          <label for="Hachette" class="form-check-label">Hachette</label>
+          <input type="checkbox" name="new" id="new" class="form-check-input" onchange="filterNew()"/>
+          <label for="new" class="form-check-label">Nouveautés</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="Robotonics" id="Robotonics" class="form-check-input" />
-          <label for="Robotonics" class="form-check-label">Robotonics</label>
+          <input type="checkbox" name="promo" id="promo" class="form-check-input" onchange="filterPromo()"/>
+          <label for="promo" class="form-check-label">Promotions</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="Mattel" id="Mattel" class="form-check-input" />
-          <label for="Mattel" class="form-check-label">Mattel</label>
+          <input type="checkbox" name="pamper" id="pamper" class="form-check-input" onchange="filterPamper()"/>
+          <label for="pamper" class="form-check-label">Soins</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="Ty" id="Ty" class="form-check-input" />
-          <label for="Ty" class="form-check-label">Ty</label>
+          <input type="checkbox" name="goOut" id="goOut" class="form-check-input" onchange="filterGoOut()"/>
+          <label for="goOut" class="form-check-label">Sorties</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="DansLeCoin" id="DansLeCoin" class="form-check-input" />
-          <label for="DansLeCoin" class="form-check-label">DansLeCoin</label>
-        </div>
-      </section>
-      <section class=" bloc2 d-flex flex-column m-3 p-3">
-        <h4>Âge :</h4>
-        <div class="form-check">
-          <input type="checkbox" name="Ecole" id="Ecole" class="form-check-input">
-          <label for="Ecole" class="form-check-label">Ecole</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="Collège" id="Collège" class="form-check-input">
-          <label for="Collège" class="form-check-label">Collège</label>
+          <input type="checkbox" name="tech" id="tech" class="form-check-input" onchange="filterTech()"/>
+          <label for="tech" class="form-check-label">Tech</label>
         </div>
       </section>
-    </aside> -->
+    </aside>
 
     <article class="d-flex justify-content-center pb-3">
       <section class="container d-flex flex-wrap justify-content-around align-items-center">
         <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo">
-          <img src="../../assets/img/teenagers/books-1.jpg" alt="books" id="books"/>
+          <img src="../../assets/img/teenagers/books-1.jpg" alt="books" id="teensBooksImg"/>
           <div>
             <p>Sélection de livres - 10 €</p>
           </div>
           <form action="post">
             <label for="qty">Quantités :</label>
-            <select name="qty" id="qty" class="text-center">
+            <select name="qty" id="teensBooks" class="text-center">
               <option value="1" onclick="displayImg()">Livre 1</option>
               <option value="2" onclick="displayImg()">Livre 2</option>
               <option value="3" onclick="displayImg()">Livre 3</option>
@@ -263,6 +247,7 @@
       </div>
       </section>
     </article>
+  </div>
   </main>
 
   <footer class="footer bg-info footer-expand-lg mt-3">
@@ -287,8 +272,11 @@
     <a href="#up"><img src="../../assets/img/index/up.png" alt="up button" class="up" /></a>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../../assets/js/teens.js"></script>
-
+  <script src="../../assets/js/filterBy.js"></script>
+  <script src="../../assets/js/displayHeader.js"></script>
+  <!-- <script src="../../assets/js/sortBy.js"></script> -->
+  <script src="../../assets/js/displayPdtsOnSelect.js"></script>
+  <script src="../../assets/js/displayPdtsOnSelect/teens.js"></script>
 </body>
 
 </html>

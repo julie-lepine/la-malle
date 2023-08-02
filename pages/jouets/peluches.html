@@ -91,80 +91,55 @@
       <hr />
       <section class="d-flex justify-content-end mb-3 mt-3">
         <form action="post" class="pe-3 m-2 text-center">
-          <label for="tri">Filtrer :</label>
+          <label for="tri">Trier par :</label>
           <select name="tri" id="tri" class="text-center">
-            <option value="---" class="btn active" onclick="filterAll()">Tout montrer</option>
-            <option value="news" class="btn" onclick="filterNew()">Nouveautés</option>
-            <option value="promotions" class="btn" onclick="filterPromo()">Promotions</option>
-            <option value="ten" class="btn" onclick="filterTen()">10€ et -</option>
-            <option value="fourty" class="btn" onclick="filterFourty()">40cm et +</option>
-            <option value="season" class="btn" onclick="filterSeasoned()">Saisonnier</option>
+            <option value="all" class="btn active" onclick="showAll()">Tout montrer</option>
+            <option value="ascend" class="btn" onclick="sortAscending()">Prix croissant</option>
+            <option value="descend" class="btn" onclick="filterDescending()">Prix décroissant</option>
           </select>
         </form>
       </section>
     </article>
 
+    <div class="d-flex">
         <!-- BLOC DE FILTRES -->
-    <!-- <aside class="contenu10">
+    <aside class="contenu10 w-25">
       <h3 class="text-center mt-3">Filtrer :</h3>
       <section class="bloc2 d-flex flex-column m-3 p-3">
         <h4>Prix</h4>
         <div class="form-check">
-          <input type="checkbox" name="low" id="low" class="form-check-input" />
+          <input type="checkbox" name="low" id="low" class="form-check-input" onchange="filterPriceLow()"/>
           <label for="low" class="form-check-label">Jusqu'à 15 €</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="mid" id="mid" class="form-check-input" />
-          <label for="mid" class="form-check-label">De 15 € à 25 €</label>
+          <input type="checkbox" name="med" id="med" class="form-check-input" onchange="filterPriceMed()"/>
+          <label for="med" class="form-check-label">De 15 € à 50 €</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="ok" id="ok" class="form-check-input" />
-          <label for="ok" class="form-check-label">De 25 € à 45 €</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="high" id="high" class="form-check-input" />
-          <label for="high" class="form-check-label">45 € et +</label>
+          <input type="checkbox" name="high" id="high" class="form-check-input" onchange="filterPriceHigh()"/>
+          <label for="high" class="form-check-label">50 € et +</label>
         </div>
       </section>
       <section class=" bloc2 d-flex flex-column m-3 p-3">
-        <h4>Marque :</h4>
+        <h4>Produit :</h4>
         <div class="form-check">
-          <input type="checkbox" name="Hachette" id="Hachette" class="form-check-input" />
-          <label for="Hachette" class="form-check-label">Hachette</label>
+          <input type="checkbox" name="new" id="new" class="form-check-input" onchange="filterNew()"/>
+          <label for="new" class="form-check-label">Nouveautés</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="Robotonics" id="Robotonics" class="form-check-input" />
-          <label for="Robotonics" class="form-check-label">Robotonics</label>
+          <input type="checkbox" name="seasoned" id="seasoned" class="form-check-input" onchange="filterSeasoned()" />
+          <label for="seasoned" class="form-check-label">Saisonniers</label>
         </div>
         <div class="form-check">
-          <input type="checkbox" name="Mattel" id="Mattel" class="form-check-input" />
-          <label for="Mattel" class="form-check-label">Mattel</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="Ty" id="Ty" class="form-check-input" />
-          <label for="Ty" class="form-check-label">Ty</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="DansLeCoin" id="DansLeCoin" class="form-check-input" />
-          <label for="DansLeCoin" class="form-check-label">DansLeCoin</label>
+          <input type="checkbox" name="promo" id="promo" class="form-check-input" onchange="filterPromo()"/>
+          <label for="promo" class="form-check-label">Promotions</label>
         </div>
       </section>
-      <section class=" bloc2 d-flex flex-column m-3 p-3">
-        <h4>Âge :</h4>
-        <div class="form-check">
-          <input type="checkbox" name="Ecole" id="Ecole" class="form-check-input">
-          <label for="Ecole" class="form-check-label">Ecole</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="Collège" id="Collège" class="form-check-input">
-          <label for="Collège" class="form-check-label">Collège</label>
-        </div>
-      </section>
-    </aside> -->
+    </aside>
 
       <article class="d-flex justify-content-center pb-3">
         <section class="container d-flex flex-wrap justify-content-around align-items-center">
-          <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv ten new">
+          <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new low">
             <img src="../../assets/img/peluches/baleine.jpg" alt="baleine" />
             <div>
               <p>Baleine, 22cm - 10 €</p>
@@ -172,7 +147,7 @@
             <button type="submit" class="btn btn-secondary m-3"><a href="#"
               class="link-dark linkunderline">Ajouter</a></button>
           </div>
-        <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo fourty">
+        <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo high">
           <img src="../../assets/img/peluches/trex.jpg" alt="diplo" />
           <div>
             <p>T-Rex, 45cm - 55 €</p>
@@ -180,7 +155,7 @@
           <button type="submit" class="btn btn-secondary m-3"><a href="#"
               class="link-dark linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+        <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv med">
           <img src="../../assets/img/peluches/lapin.jpg" alt="lapinnaissance" />
           <div>
             <p>Lapin de naissance - 20 €</p>
@@ -188,7 +163,7 @@
           <button type="submit" class="btn btn-secondary m-3"><a href="#"
               class="link-dark linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+        <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv med">
           <img src="../../assets/img/peluches/rab-grey.jpg" alt="lapin" id="rabbitsImg"/>
           <div>
             <p>Lapin câlin, 18cm - 20 €</p>
@@ -205,7 +180,7 @@
           <button type="submit" class="btn btn-secondary m-3"><a href="#"
               class="link-dark linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new fourty">
+        <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new high">
           <img src="../../assets/img/peluches/nounours.jpg" alt="nounours" />
           <div>
             <p>Nounours géant, 95cm - 80 €</p>
@@ -213,7 +188,7 @@
           <button type="submit" class="btn btn-secondary m-3"><a href="#"
               class="link-dark linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo">
+        <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo med">
           <img src="../../assets/img/peluches/plushes.jpg" alt="mouton" />
           <div>
             <p>Moutons tout doux, 35cm - 48 €</p>
@@ -221,7 +196,7 @@
           <button type="submit" class="btn btn-secondary m-3"><a href="#"
               class="link-dark linkunderline">Ajouter</a></button>
           </div>
-        <div class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv">
+        <div class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv med">
           <img src="../../assets/img/peluches/bag-cerf.jpg" alt="sac_a_dos" id="bagImg"/>
           <div>
             <p>Sac à dos - 35 €</p>
@@ -239,7 +214,7 @@
           <button type="submit" class="btn btn-secondary m-3"><a href="#"
               class="link-dark linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu8 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv season ten">
+        <div class="contenu contenu8 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv season low">
           <img src="../../assets/img/peluches/santa.jpg" alt="perenoel" />
           <div>
             <p>Père Noël, 9cm - 8 €</p>
@@ -247,7 +222,7 @@
           <button type="submit" class="btn btn-secondary m-3"><a href="#"
               class="link-dark linkunderline">Ajouter</a></button>
         </div>
-        <div class="contenu contenu9 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new fourty">
+        <div class="contenu contenu9 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new high">
           <img src="../../assets/img/peluches/diplo2.jpg" alt="diplodocus" />
           <div>
             <p>Diplodocus, 45 cm - 55 €</p>
@@ -257,6 +232,7 @@
         </div>
         </section>
       </article>
+    </div>
     </main>  
 
   <footer class="footer bg-info footer-expand-lg mt-3">
@@ -281,7 +257,10 @@
     <a href="#up"><img src="../../assets/img/index/up.png" alt="up button" class="up" /></a>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="../../assets/js/peluches.js"></script>
+  <script src="../../assets/js/filterBy.js"></script>
+  <script src="../../assets/js/displayHeader.js"></script>
+  <!-- <script src="../../assets/js/sortBy.js"></script> -->
+  <script src="../../assets/js/displayPdtsOnSelect/peluches.js"></script>
 </body>
 
 </html>
