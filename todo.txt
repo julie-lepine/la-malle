@@ -11,4 +11,4 @@ X - MODIFIER LES PHOTOS A LA SELECTION DU SELECT
 
 - AJOUTER PANIER / COMPTE
 
-- ajouter icones "new", "promo", 
+EN COURS - ajouter icones "new", "promo", 
