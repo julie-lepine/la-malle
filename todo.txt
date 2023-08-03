@@ -8,7 +8,9 @@ X - MODIFIER LES PHOTOS A LA SELECTION DU SELECT
 - filtrer dans le discover (bloc rouge) -> problablement la même chose que les autres en enlevant le else afin que les critères s'additionnent
 ----> ne pass enlever le else pour le filtre "nouveauté promos etc"
 - RESPONSIVE
-
+- AJOUTER APPARITION SMOOTH SUR LES ARTICLES ET PAGES DE L INDEX
+- AJOUTER ICONE DU RAYON SUR L INDEX > CAT "NOUVEAUTES"
 - AJOUTER PANIER / COMPTE
+- AJOUTER LES -50% SUR LES PELUCHES
 
 EN COURS - ajouter icones "new", "promo", 

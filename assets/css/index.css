@@ -5,19 +5,7 @@ main .title, .no-mobile {
     margin: 2%;
 }
 
-/* RESPONSIVE */
-@media screen and (max-width: 425px) {
-    main .kermit, main .paques {
-        display: none;
-    }
-}
-
-
-.truc {
-    color: #ba324f;
-}
-
 .kermit:hover {
-    transform: scale(1.1);
-    transition-duration: 2s;
+    transform: scale(1.2);
+    transition-duration: 1s;
 }

@@ -68,3 +68,13 @@ footer div {
     right: 2%;
     bottom: 2%;
 }
+
+/* scroll management */
+.reveal {
+    opacity: 0;
+}
+  
+.reveal-visible {
+opacity: 1;
+transition: 2s cubic-bezier(0.5, 0, 0, 1);
+}
