@@ -1,11 +1,4 @@
- /* TEXTES */
-main .title, .no-mobile {
-    font-size: 1.5em;
-    padding: 2% 5%;
-    margin: 2%;
-}
-
-.kermit:hover {
+.indexCatImgs:hover {
     transform: scale(1.2);
     transition-duration: 1s;
 }
