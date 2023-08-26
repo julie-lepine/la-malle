@@ -95,48 +95,100 @@
     </div>
   </article>
 
-  <main class="container-fluid w-100 pt-4">
+  <main class="container-fluid w-75 pt-4">
     <div class="m-3 mb-5 w-100 d-flex justify-content-around align-items-center gap-3">
-      <div class="w-25 d-flex flew-wrap flex-column gap-2 justify-content-around align-items-center">
-
-        <div style="width: 15vw; border: 4px solid #e85d75; border-radius: 30px;" class="text-center">
-          <p class="mt-3">Découvrez nos nouveautés</p>
-          <a href="#lastPdts">
-            <img src="./assets/img/index/star.png" class="w-50 p-2 mb-2 indexCatImgs" alt="kermit" />
-          </a>
-        </div>
-
-        <div style="width: 15vw; border: 4px solid #c08497; border-radius: 30px;" class="text-center">
-          <p class="mt-3">Par ici les promotions !</p>
-          <a href="#now">
-            <img src="./assets/img/index/hot-sale.png" class="indexCatImgs w-50 p-2 mb-2" alt="kermit">
-          </a>
-        </div>
-
-        <div style="width: 15vw; border: 4px solid #101935; border-radius: 30px;" class="text-center">
-          <p class="mt-3">Nos partenaires <img src="./assets/img/index/heart.png" alt="coeur" width="20px"></p>
-          <a href="#partners">
-            <img src="./assets/img/index/startup.png" class="indexCatImgs w-50 p-2 mb-2" alt="kermit"/>
-          </a>
-        </div>
-      </div>
-      <button class="btn btn-white m-2 w-50 d-flex flex-column justify-content-around align-items-center" data-bs-target="#modalConcours" data-bs-toggle="modal" type="button">
-        <div class="d-flex justify-content-center align-items-center pt-3 pb-3 h-auto w-100 gap-5 " style="background-color: #ffbd42c5; border: 2px solid #C08497;">
+      <button class="btn btn-white m-2 w-75 d-flex flex-column justify-content-around align-items-center" data-bs-target="#modalConcours" data-bs-toggle="modal" type="button">
+        <div class="d-flex justify-content-evenly align-items-center pt-3 pb-3 h-auto w-100 gap-5 " style="background-color: #ffbd42c5; border: 2px solid #C08497;">
           <img src="./assets/img/index/disguise.jpg" alt="image d'enfants déguisés, cliquer ici pour participer au concours !" class="w-50" style="max-width: 15vw; padding: 2vh 0; border-radius: 25px;">
           <div class="w-25">
-            <h1>Concours !</h1>
-            <h2>La Malle</h2>
-            <br><br>
-            <p>Déguise-toi avec ton plus beau déguisement et tente de gagner la tenue de ton choix (clique sur l'image pour participer)</p>
+            <h1 style="font-size: 2em;" class="mb-3">Concours</h1>
+            <img src="./assets/img/index/logo.jpg" alt="logo de La Malle" class="w-50 mb-5">
+            <p class="fw-bold">Déguise-toi avec ton plus beau déguisement et tente de gagner la tenue de ton choix (clique sur l'image pour participer)</p>
           </div>
         </div>
       </button>
     </div>
 
+    <div class="d-flex gap-5 justify-content-center mb-5 mt-3">
+      <div style="width: 15vw; border: 4px solid #d82543; border-radius: 30px;" class="text-center">
+        <p class="mt-3">Découvrez nos nouveautés</p>
+        <a href="#lastPdts">
+          <img src="./assets/img/index/star.png" class="w-50 p-2 mb-2 indexCatImgs" alt="Nos nouveautés" />
+        </a>
+      </div>
+
+      <div style="width: 15vw; border: 4px solid #c9577b; border-radius: 30px;" class="text-center">
+        <p class="mt-3">Par ici les promotions !</p>
+        <a href="#now">
+          <img src="./assets/img/index/hot-sale.png" class="indexCatImgs w-50 p-2 mb-2" alt="les promotions">
+        </a>
+      </div>
+
+      <div style="width: 15vw; border: 4px solid #101935; border-radius: 30px;" class="text-center">
+        <p class="mt-3">Nos partenaires <img src="./assets/img/index/heart.png" alt="coeur" width="20px"></p>
+        <a href="#partners">
+          <img src="./assets/img/index/startup.png" class="indexCatImgs w-50 p-2 mb-2" alt="nos partenaires"/>
+        </a>
+      </div>
+
+      <div style="width: 15vw; border: 4px solid #66166d; border-radius: 30px;" class="text-center">
+        <p class="mt-3">Idées cadeaux</p>
+        <a href="./pages/discover.html">
+          <img src="./assets/img/index/gift.png" class="indexCatImgs w-50 p-2 mb-2" alt="image d'un cadeau"/>
+        </a>
+      </div>
+  </div>
+
     <article>
-      <section class="pt-4 mb-5" id="lastPdts">
-        <p class="pt-4 pb-4 ps-5  bg-light" style="border: 4px solid #e85d75">Nos derniers produits !</p>
-        <div class="last-products d-flex flex-wrap justify-content-evenly align-items-center">
+      <p class="pt-4 pb-4 ps-5 bg-light" style="border: 4px solid #e85d75">Nos derniers produits !</p>
+      
+      <section class="pt-4 mb-5 d-flex" id="lastPdts">
+        <!-- BLOC DE FILTRES -->
+        <aside class="contenu10 w-25">
+            <h3 class="text-center mt-3">Filtrer :</h3>
+            <section class=" bloc2 d-flex flex-column m-3 p-3">
+              <h4>Produit :</h4>
+              <div class="form-check">
+                <input type="checkbox" name="imitation" id="imitation" class="form-check-input" onchange="filterImitation()"/>
+                <label for="imitation" class="form-check-label">Imitation</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name="access" id="access" class="form-check-input" onchange="filterAccess()"/>
+                <label for="access" class="form-check-label">Accessoires</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name="motricity" id="motricity" class="form-check-input" onchange="filterMotricity()"/>
+                <label for="motricity" class="form-check-label">Motricité</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name="comfort" id="comfort" class="form-check-input" onchange="filterComfort()"/>
+                <label for="comfort" class="form-check-label">Confort de bébé</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name="goOut" id="goOut" class="form-check-input" onchange="filterGoOut()"/>
+                <label for="goOut" class="form-check-label">Sorties</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name="tech" id="tech" class="form-check-input" onchange="filterTech()"/>
+                <label for="tech" class="form-check-label">Technologies</label>
+              </div>
+              <h4 class="mt-4">Prix :</h4>
+              <div class="form-check">
+                <input type="checkbox" name="low" id="low" class="form-check-input" onchange="filterPriceLow()"/>
+                <label for="low" class="form-check-label">< 20 €</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name="med" id="med" class="form-check-input" onchange="filterPriceMed()"/>
+                <label for="med" class="form-check-label">20€ à 50€</label>
+              </div>
+              <div class="form-check">
+                <input type="checkbox" name="high" id="high" class="form-check-input" onchange="filterPriceHigh()"/>
+                <label for="high" class="form-check-label">50€ et +</label>
+              </div>
+            </section>
+        </aside>
+
+        <div class="w-75 last-products d-flex flex-wrap justify-content-evenly align-items-center">
           <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new imitation low reveal" style="border: solid rgb(226, 230, 193);">
           <img src="./assets/img/kiddo/barbie.jpg" alt="mannequin" />
           <div>
@@ -153,10 +205,10 @@
           <form action="post">
             <label for="cars">Sélection du modèle :</label>
             <select name="cars" id="cars" class="text-center">
-              <option value="police" onclick="displayImg()">Police, 8cm - 8 €</option>
-              <option value="fire" onclick="displayImg()">Pompiers, 20cm - 15 €</option>
-              <option value="travel" onclick="displayImg()">Mini Van, 22cm - 17€</option>
-              <option value="construction" onclick="displayImg()">Grue, 35cm - 39 €</option>
+              <option value="police" onclick="displayImgKid()">Police, 8cm - 8 €</option>
+              <option value="fire" onclick="displayImgKid()">Pompiers, 20cm - 15 €</option>
+              <option value="travel" onclick="displayImgKid()">Mini Van, 22cm - 17€</option>
+              <option value="construction" onclick="displayImgKid()">Grue, 35cm - 39 €</option>
             </select>
           </form>
           <button type="submit" class="btn btn-primary m-3"><a href="#"
@@ -176,7 +228,7 @@
             </div>
             <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new motricity high reveal" style="border: solid rgb(193, 212, 230);">
+          <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new motricity med reveal" style="border: solid rgb(193, 212, 230);">
             <img src="./assets/img/babies/bobby-car.jpg" alt="voiture" />
             <div>
               <p>Triporteur - 30 €</p>
@@ -207,7 +259,7 @@
             <button type="submit" class="btn btn-secondary m-3"><a href="#"
               class="link-dark linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new goOut reveal" style="border: solid rgb(168, 168, 168);">
+          <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv med new goOut reveal" style="border: solid rgb(168, 168, 168);">
             <img src="./assets/img/teenagers/concert.jpg" alt="concert" />
             <div>
               <p>Place de concert au choix - 50 €</p>
@@ -215,7 +267,7 @@
             <button type="submit" class="btn  btn-dark m-3"><a href="#"
                 class="link-light linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new tech reveal" style="border: solid rgb(168, 168, 168);">
+          <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new high tech reveal" style="border: solid rgb(168, 168, 168);">
             <img src="./assets/img/teenagers/nes.png" alt="supernes" />
             <div>
               <p>Super NES + 2 manettes + 4 jeux - 250 €</p>
@@ -223,7 +275,7 @@
             <button type="submit" class="btn  btn-dark m-3"><a href="#"
                 class="link-light linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new reveal" style="border: solid rgb(168, 168, 168);">
+          <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv low new reveal" style="border: solid rgb(168, 168, 168);">
             <img src="./assets/img/teenagers/netflix.jpg" alt="netflix" />
             <div>
               <p>Carte cadeaux abonnement 1 mois au choix - 10 €</p>
@@ -239,9 +291,9 @@
             <form action="post">
               <label for="color">Choix couleur :</label>
               <select name="color" id="treeColor" class="text-center">
-                <option value="black" onclick="displayImg()">Noir</option>
-                <option value="brown" onclick="displayImg()">Marron</option>
-                <option value="red" onclick="displayImg()">Rouge</option>
+                <option value="black" onclick="displayImgCat()">Noir</option>
+                <option value="brown" onclick="displayImgCat()">Marron</option>
+                <option value="red" onclick="displayImgCat()">Rouge</option>
               </select>
             </form>
             <button type="submit" class="btn btn-warning m-3"><a href="#"
@@ -263,7 +315,7 @@
               <button type="submit" class="btn btn-warning m-3"><a href="#"
                   class="link-dark linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new med reveal" style="border: solid rgb(241, 239, 93);">
+          <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new low reveal" style="border: solid rgb(241, 239, 93);">
               <img src="./assets/img/pets/dogs/freesbee.jpg" alt="freesbee" />
               <div class="texte">
                 <p>Frisbee, coloris au choix - 10 €</p>
@@ -280,7 +332,7 @@
               <button type="submit" class="btn btn-danger m-3"><a href="#"
                   class="link-dark linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv access new med high access reveal" style="border: solid rgb(241, 239, 93);">
+          <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv access new low  access reveal" style="border: solid rgb(241, 239, 93);">
               <img src="./assets/img/pets/dogs/leash.jpg" alt="laisse" />
               <div class="texte">
                 <p>Laisse - à p. de 15 €</p>
@@ -297,7 +349,7 @@
               <button type="submit" class="btn btn-danger m-3"><a href="#"
                   class="link-dark linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new ped reveal" style="border: solid rgb(179, 177, 177);">
+          <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new low reveal" style="border: solid rgb(179, 177, 177);">
             <img src="./assets/img/board_games/puzz-24.jpg" alt="puzzle" id="puzzImg"/>
             <div>
               <p>Puzzles - à p. de 10 €</p>
@@ -305,16 +357,16 @@
             <form action="post">
               <label for="puzzle">Nb de pièces :</label>
               <select name="puzzle" id="puzzleSelect" class="text-center">
-                <option value="24" onclick="displayImg()">24 pièces - 10 €</option>
-                <option value="100" onclick="displayImg()">100 pièces - 10 €</option>
-                <option value="500" onclick="displayImg()">500 pièces - 20 €</option>
-                <option value="1000" onclick="displayImg()">1000 pièces - 25 €</option>
+                <option value="24" onclick="displayImgPuzz()">24 pièces - 10 €</option>
+                <option value="100" onclick="displayImgPuzz()">100 pièces - 10 €</option>
+                <option value="500" onclick="displayImgPuzz()">500 pièces - 20 €</option>
+                <option value="1000" onclick="displayImgPuzz()">1000 pièces - 25 €</option>
               </select>
             </form>
             <button type="submit" class="btn btn-success mt-3"><a href="#"
                 class="link-light linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new high reveal" style="border: solid rgb(179, 177, 177);">
+          <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new med reveal" style="border: solid rgb(179, 177, 177);">
             <img src="./assets/img/board_games/darts-155726_1280.png" alt="flechettes" />
             <div>
               <p>Jeu de fléchettes - 20 €</p>
@@ -330,9 +382,9 @@
             <form action="post">
               <label for="leash">Choix du nb de faces :</label>
               <select name="leash" id="dice" class="text-center">
-                <option value="6" onclick="displayImg()">6 faces - 5 €</option>
-                <option value="20" onclick="displayImg()">20 faces - 25 €</option>
-                <option value="mix" onclick="displayImg()">Mix (3 à 40 faces) - 40 €</option>
+                <option value="6" onclick="displayImgDice()">6 faces - 5 €</option>
+                <option value="20" onclick="displayImgDice()">20 faces - 25 €</option>
+                <option value="mix" onclick="displayImgDice()">Mix (3 à 40 faces) - 40 €</option>
               </select>
             </form>
             <button type="submit" class="btn btn-success mt-3"><a href="#"
@@ -342,7 +394,7 @@
       </section>
 
       <section class="w-100 pt-4 mb-5" id="now">
-        <p class="pt-4 pb-4 ps-5  bg-light" style="border: 4px solid #c08497">En ce moment...</p>
+        <p class="pt-4 pb-4 ps-5 bg-light" style="border: 4px solid #c08497">En ce moment...</p>
         <div class=" pt-5 pb-5 d-flex flex-wrap justify-content-evenly align-items-center h-100">
           <a href="./pages/jouets/peluches.html" class="w-50 text-center">
             <img src="./assets/img/index/soft-toys-3158361_1920.jpg" alt="promotions" class="peluches w-50" /></a>
@@ -410,6 +462,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./assets/js/displayHeader.js"></script>
   <script src="./assets/js/displayPdtsOnSelect/index.js"></script>
+  <script src="./assets/js/filterBy.js"></script>
 
 </body>
 

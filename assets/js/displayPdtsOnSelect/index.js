@@ -4,8 +4,8 @@
 const treeImg = document.getElementById("treeImg");
 const treeDivBtns = document.getElementById("treeColor");
 
-function displayImg() {
-  treeImg.src = `../../assets/img/pets/cats/tree-${treeDivBtns.value}.jpg`;
+function displayImgCat() {
+  treeImg.src = `../assets/img/pets/cats/tree-${treeDivBtns.value}.jpg`;
 }
 
 // BOARDGAMES
@@ -15,17 +15,20 @@ const diceSelectBtns = document.getElementById("dice");
 const puzzImg = document.getElementById("puzzImg");
 const puzzSelectBtns = document.getElementById("puzzleSelect");
 
-function displayImg() {
-  diceImg.src = `../assets/img/board_games/dice-${diceSelectBtns.value}.jpg`;
+function displayImgPuzz() {
   puzzImg.src = `../assets/img/board_games/puzz-${puzzSelectBtns.value}.jpg`;
+}
+
+function displayImgDice() {
+  diceImg.src = `../assets/img/board_games/dice-${diceSelectBtns.value}.jpg`;
 }
 
 // KIDS
 const miniasImg = document.getElementById("miniasImg");
 const carsDivBtns = document.getElementById("cars");
 
-function displayImg() {
-  miniasImg.src = `../../assets/img/kiddo/car-${carsDivBtns.value}.jpg`;
+function displayImgKid() {
+  miniasImg.src = `../assets/img/kiddo/car-${carsDivBtns.value}.jpg`;
 }
 
 // scroll transition
