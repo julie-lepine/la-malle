@@ -33,16 +33,27 @@ nav ul li a:hover{
 
 /* CASES DE CHAQUE ARTICLE */
 .contenu {
-    width: 20vw;
-    min-width: 20vw;
-    max-width: 20vw;
-    height: 35vh;
-    min-height: 35vh;
+    width: 30vh;
+    height: 40vh;
+}
+
+select {
+    width: 70%;
+}
+
+@media screen and (min-width:992px) {
+    .contenu10, .bloc2 {
+        width: 25vw!important;
+    }
+
+    div.w-100:nth-child(2) {
+        width: 75vw;
+    }
 }
 
 /* IMAGES */
 .contenu img {
-    width: 40%;
+    width: 50%;
 }
 
 /* ARTICLES FILTER */
@@ -62,7 +73,7 @@ footer div {
 
 /* UP BUTTON */
 .up {
-    width: 5%;
+    width: 7%;
     position: fixed;
     right: 2%;
     bottom: 2%;

@@ -7,8 +7,8 @@ X - MODIFIER LES PHOTOS A LA SELECTION DU SELECT
 - FINIR IDEES CADEAUX UNE FOIS TOUTES LES ACTIONS AU CLIC SONT REGLEES
 - filtrer dans le discover (bloc rouge) -> problablement la même chose que les autres en enlevant le else afin que les critères s'additionnent
 ----> ne pass enlever le else pour le filtre "nouveauté promos etc"
-- RESPONSIVE
-- AJOUTER APPARITION SMOOTH SUR LES ARTICLES ET  [X] PAGES DE L INDEX
+- RESPONSIVE (ok index et pages articles. Reste pages non construites)
+X - AJOUTER APPARITION SMOOTH SUR LES ARTICLES ET  [X] PAGES DE L INDEX
 - AJOUTER ICONE DU RAYON SUR L INDEX > CAT. "NOUVEAUTES"
 - AJOUTER PANIER / COMPTE
 - AJOUTER LES -50% SUR LES PELUCHES (genre bandeau : -50% en caisse)

@@ -17,9 +17,10 @@
 </head>
 
 <body>
-  <header id="up" class="sticky-top">
+  <header class="sticky-top">
     <nav class="navbar bg-info navbar-expand-lg w-100">
-      <a href="index.html" class="navbar-brand ms-2"><img src="./assets/img/index/logo.jpg" alt="logo" class="rounded" id="logo"/></a>
+      <a href="index.html" class="navbar-brand ms-2"><img src="./assets/img/index/logo.jpg" alt="logo" class="rounded"
+          id="logo" /></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
@@ -41,8 +42,8 @@
             </ol>
           </li>
           <li class="nav-item w-100 dropdown">
-            <a href="chats.html" class="btn btn-info dropdown-toggle nav-link link-dark" role="button"
-              id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">Animaux</a>
+            <a href="chats.html" class="btn btn-info dropdown-toggle nav-link link-dark" role="button" id="dropdownMenu"
+              data-bs-toggle="dropdown" aria-expanded="false">Animaux</a>
             <ol class="dropdown-menu" aria-labelledby="dropdownMenu">
               <li><a href="./pages/pets/chats.html" class="dropdown-item">Chats</a></li>
               <li><a href="./pages/pets/chiens.html" class="dropdown-item">Chiens</a></li>
@@ -51,8 +52,8 @@
           <li class="nav-item w-100"><a href="./pages/boardgames.html" class="nav-link link-dark">Board Games</a></li>
           <li class="nav-item w-100"><a href="./pages/discover.html" class="nav-link link-dark">Idées cadeaux</a></li>
           <li class="nav-item w-100"><a href="../../index.html" class="nav-link link-dark">Retour accueil</a></li>
-          <li class="nav-item w-0 me-3 mb-3"><a href="./pages/panier.html"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                height="24" fill="currentColor" class="bi bi-bag text-dark" viewBox="0 0 16 16">
+          <li class="nav-item w-0 me-3 mb-3"><a href="./pages/panier.html"><svg xmlns="http://www.w3.org/2000/svg"
+                width="24" height="24" fill="currentColor" class="bi bi-bag text-dark" viewBox="0 0 16 16">
                 <path
                   d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z" />
               </svg></a></li>
@@ -95,147 +96,177 @@
     </div>
   </article>
 
-  <main class="container-fluid w-75 pt-4">
+  <main class="container-fluid w-100 w-md-75 pt-4" id="up">
+
     <div class="m-3 mb-5 w-100 d-flex justify-content-around align-items-center gap-3">
-      <button class="btn btn-white m-2 w-75 d-flex flex-column justify-content-around align-items-center" data-bs-target="#modalConcours" data-bs-toggle="modal" type="button">
-        <div class="d-flex justify-content-evenly align-items-center pt-3 pb-3 h-auto w-100 gap-5 " style="background-color: #ffbd42c5; border: 2px solid #C08497;">
-          <img src="./assets/img/index/disguise.jpg" alt="image d'enfants déguisés, cliquer ici pour participer au concours !" class="w-50" style="max-width: 15vw; padding: 2vh 0; border-radius: 25px;">
-          <div class="w-25">
+      <button class="btn m-2 w-xl-75 w-md-100" data-bs-target="#modalConcours" data-bs-toggle="modal" type="button">
+
+        <div
+          class="d-flex flex-md-row flex-column justify-content-evenly align-items-center pt-md-3 pb-md-3 h-auto w-100 gap-5 "
+          style="background-color: #ffbd42c5; border: 2px solid #C08497;">
+
+          <img src="./assets/img/index/disguise.jpg"
+            alt="image d'enfants déguisés, cliquer ici pour participer au concours !" class="p-3 "
+            style="max-width: 20vw; min-width: 15vh; border-radius: 25px;">
+
+          <div class="w-50 d-flex flex-column justify-content-center align-items-center">
             <h1 style="font-size: 2em;" class="mb-3">Concours</h1>
-            <img src="./assets/img/index/logo.jpg" alt="logo de La Malle" class="w-50 mb-5">
-            <p class="fw-bold">Déguise-toi avec ton plus beau déguisement et tente de gagner la tenue de ton choix (clique sur l'image pour participer)</p>
+            <img src="./assets/img/index/logo.jpg" alt="logo de La Malle"
+              class="w-lg-25 w-md-50 mb-5 d-none d-md-block">
+            <p class="fw-bold">Déguise-toi avec ton plus beau déguisement et tente de gagner la tenue de ton choix
+              (clique sur l'image pour participer)</p>
           </div>
+
         </div>
+
       </button>
+
     </div>
 
-    <div class="d-flex gap-5 justify-content-center mb-5 mt-3">
-      <div style="width: 15vw; border: 4px solid #d82543; border-radius: 30px;" class="text-center">
+    <div class="d-flex flex-column flex-md-row gap-5 justify-content-center align-content-center mt-3 mb-5">
+      <div style="min-width: 10vw; border: 4px solid #d82543; border-radius: 30px; margin-inline: auto;"
+        class="text-center w-50">
         <p class="mt-3">Découvrez nos nouveautés</p>
         <a href="#lastPdts">
-          <img src="./assets/img/index/star.png" class="w-50 p-2 mb-2 indexCatImgs" alt="Nos nouveautés" />
+          <img src="./assets/img/index/star.png" class="w-50 p-2 m-2 indexCatImgs" alt="Nos nouveautés" />
         </a>
       </div>
 
-      <div style="width: 15vw; border: 4px solid #c9577b; border-radius: 30px;" class="text-center">
+      <div style="min-width: 15vw; border: 4px solid #c9577b; border-radius: 30px; margin-inline: auto;"
+        class="text-center w-50">
         <p class="mt-3">Par ici les promotions !</p>
         <a href="#now">
-          <img src="./assets/img/index/hot-sale.png" class="indexCatImgs w-50 p-2 mb-2" alt="les promotions">
+          <img src="./assets/img/index/hot-sale.png" class="indexCatImgs w-50 p-2 m-2" alt="les promotions">
         </a>
       </div>
 
-      <div style="width: 15vw; border: 4px solid #101935; border-radius: 30px;" class="text-center">
+      <div style="min-width: 15vw; border: 4px solid #101935; border-radius: 30px; margin-inline: auto;"
+        class="text-center w-50">
         <p class="mt-3">Nos partenaires <img src="./assets/img/index/heart.png" alt="coeur" width="20px"></p>
         <a href="#partners">
-          <img src="./assets/img/index/startup.png" class="indexCatImgs w-50 p-2 mb-2" alt="nos partenaires"/>
+          <img src="./assets/img/index/startup.png" class="indexCatImgs w-50 p-2 m-2" alt="nos partenaires" />
         </a>
       </div>
 
-      <div style="width: 15vw; border: 4px solid #66166d; border-radius: 30px;" class="text-center">
+      <div style="min-width: 15vw; border: 4px solid #66166d; border-radius: 30px; margin-inline: auto;"
+        class="text-center w-50">
         <p class="mt-3">Idées cadeaux</p>
         <a href="./pages/discover.html">
-          <img src="./assets/img/index/gift.png" class="indexCatImgs w-50 p-2 mb-2" alt="image d'un cadeau"/>
+          <img src="./assets/img/index/gift.png" class="indexCatImgs w-50 p-2 m-2" alt="image d'un cadeau" />
         </a>
       </div>
-  </div>
+    </div>
 
-    <article>
-      <p class="pt-4 pb-4 ps-5 bg-light" style="border: 4px solid #e85d75">Nos derniers produits !</p>
+    <article class="w-100">
       
-      <section class="pt-4 mb-5 d-flex" id="lastPdts">
+      <p class="pt-4 pb-4 ps-5 bg-light" style="border: 4px solid #e85d75">Nos derniers produits !</p>
+
+      <section class="w-100 pt-4 mb-5 d-flex flex-column flex-lg-row" id="lastPdts">
         <!-- BLOC DE FILTRES -->
-        <aside class="contenu10 w-25">
-            <h3 class="text-center mt-3">Filtrer :</h3>
-            <section class=" bloc2 d-flex flex-column m-3 p-3">
-              <h4>Produit :</h4>
-              <div class="form-check">
-                <input type="checkbox" name="imitation" id="imitation" class="form-check-input" onchange="filterImitation()"/>
-                <label for="imitation" class="form-check-label">Imitation</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" name="access" id="access" class="form-check-input" onchange="filterAccess()"/>
-                <label for="access" class="form-check-label">Accessoires</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" name="motricity" id="motricity" class="form-check-input" onchange="filterMotricity()"/>
-                <label for="motricity" class="form-check-label">Motricité</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" name="comfort" id="comfort" class="form-check-input" onchange="filterComfort()"/>
-                <label for="comfort" class="form-check-label">Confort de bébé</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" name="goOut" id="goOut" class="form-check-input" onchange="filterGoOut()"/>
-                <label for="goOut" class="form-check-label">Sorties</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" name="tech" id="tech" class="form-check-input" onchange="filterTech()"/>
-                <label for="tech" class="form-check-label">Technologies</label>
-              </div>
-              <h4 class="mt-4">Prix :</h4>
-              <div class="form-check">
-                <input type="checkbox" name="low" id="low" class="form-check-input" onchange="filterPriceLow()"/>
-                <label for="low" class="form-check-label">< 20 €</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" name="med" id="med" class="form-check-input" onchange="filterPriceMed()"/>
-                <label for="med" class="form-check-label">20€ à 50€</label>
-              </div>
-              <div class="form-check">
-                <input type="checkbox" name="high" id="high" class="form-check-input" onchange="filterPriceHigh()"/>
-                <label for="high" class="form-check-label">50€ et +</label>
-              </div>
-            </section>
+        <aside class="contenu10 w-100">
+          <h3 class="text-center mt-3">Filtrer :</h3>
+          <section class="bloc2 d-flex flex-column m-3 p-3">
+            <h4>Produit :</h4>
+            <div class="form-check">
+              <input type="checkbox" name="imitation" id="imitation" class="form-check-input"
+                onchange="filterImitation()" />
+              <label for="imitation" class="form-check-label">Imitation</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="access" id="access" class="form-check-input" onchange="filterAccess()" />
+              <label for="access" class="form-check-label">Accessoires</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="motricity" id="motricity" class="form-check-input"
+                onchange="filterMotricity()" />
+              <label for="motricity" class="form-check-label">Motricité</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="comfort" id="comfort" class="form-check-input" onchange="filterComfort()" />
+              <label for="comfort" class="form-check-label">Confort de bébé</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="goOut" id="goOut" class="form-check-input" onchange="filterGoOut()" />
+              <label for="goOut" class="form-check-label">Sorties</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="tech" id="tech" class="form-check-input" onchange="filterTech()" />
+              <label for="tech" class="form-check-label">Technologies</label>
+            </div>
+            <h4 class="mt-4">Prix :</h4>
+            <div class="form-check">
+              <input type="checkbox" name="low" id="low" class="form-check-input" onchange="filterPriceLow()" />
+              <label for="low" class="form-check-label">
+                < 20 €</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="med" id="med" class="form-check-input" onchange="filterPriceMed()" />
+              <label for="med" class="form-check-label">20€ à 50€</label>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" name="high" id="high" class="form-check-input" onchange="filterPriceHigh()" />
+              <label for="high" class="form-check-label">50€ et +</label>
+            </div>
+          </section>
         </aside>
 
-        <div class="w-75 last-products d-flex flex-wrap justify-content-evenly align-items-center">
-          <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new imitation low reveal" style="border: solid rgb(226, 230, 193);">
-          <img src="./assets/img/kiddo/barbie.jpg" alt="mannequin" />
-          <div>
-            <p>Poupées mannequin - 10 €</p>
+        <div class="w-100 last-products d-flex flex-column flex-md-row flex-wrap justify-content-evenly align-items-center">
+          <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new imitation low reveal"
+            style="border: solid rgb(226, 230, 193);">
+            <img src="./assets/img/kiddo/barbie.jpg" alt="mannequin" />
+            <div>
+              <p>Poupées mannequin - 10 €</p>
+            </div>
+            <button type="submit" class="btn btn-primary m-3"><a href="#" class="link-light linkunderline"><a href="#"
+                  class="link-light linkunderline">Ajouter</a></a></button>
           </div>
-          <button type="submit" class="btn btn-primary m-3"><a href="#" class="link-light linkunderline"><a
-                href="#" class="link-light linkunderline">Ajouter</a></a></button>
+          <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new imitation low reveal"
+            style="border: solid rgb(226, 230, 193);">
+            <img src="./assets/img/kiddo/car-police.jpg" alt="miniatures" id="miniasImg" />
+            <div>
+              <p>Véhicules miniatures - à p. de 8 €</p>
+            </div>
+            <form action="post">
+              <label for="cars">Sélection du modèle :</label>
+              <select name="cars" id="cars" class="text-center">
+                <option value="police" onclick="displayImgKid()">Police, 8cm - 8 €</option>
+                <option value="fire" onclick="displayImgKid()">Pompiers, 20cm - 15 €</option>
+                <option value="travel" onclick="displayImgKid()">Mini Van, 22cm - 17€</option>
+                <option value="construction" onclick="displayImgKid()">Grue, 35cm - 39 €</option>
+              </select>
+            </form>
+            <button type="submit" class="btn btn-primary m-3"><a href="#"
+                class="link-light linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new imitation low reveal" style="border: solid rgb(226, 230, 193);">
-          <img src="./assets/img/kiddo/car-police.jpg" alt="miniatures" id="miniasImg"/>
-          <div>
-            <p>Véhicules miniatures - à p. de 8 €</p>
-          </div>
-          <form action="post">
-            <label for="cars">Sélection du modèle :</label>
-            <select name="cars" id="cars" class="text-center">
-              <option value="police" onclick="displayImgKid()">Police, 8cm - 8 €</option>
-              <option value="fire" onclick="displayImgKid()">Pompiers, 20cm - 15 €</option>
-              <option value="travel" onclick="displayImgKid()">Mini Van, 22cm - 17€</option>
-              <option value="construction" onclick="displayImgKid()">Grue, 35cm - 39 €</option>
-            </select>
-          </form>
-          <button type="submit" class="btn btn-primary m-3"><a href="#"
-              class="link-light linkunderline">Ajouter</a></button>
-          </div>
-          <div class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new high reveal" style="border: solid rgb(193, 212, 230);">
+          <div class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new high reveal"
+            style="border: solid rgb(193, 212, 230);">
             <img src="./assets/img/babies/seances_photo.jpg" alt="photo" />
             <div>
               <p>Offrez une séance photo à thème ! (à p. de 50 €)</p>
             </div>
-            <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
+            <button type="submit" class="btn btn-info m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new comfort low reveal" style="border: solid rgb(193, 212, 230);">
+          <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new comfort low reveal"
+            style="border: solid rgb(193, 212, 230);">
             <img src="./assets/img/babies/crib-mobile-2654734_1920.jpg" alt="mobile" />
             <div>
               <p>Mobile en bois - 10 €</p>
             </div>
-            <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
+            <button type="submit" class="btn btn-info m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new motricity med reveal" style="border: solid rgb(193, 212, 230);">
+          <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new motricity med reveal"
+            style="border: solid rgb(193, 212, 230);">
             <img src="./assets/img/babies/bobby-car.jpg" alt="voiture" />
             <div>
               <p>Triporteur - 30 €</p>
             </div>
-            <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
+            <button type="submit" class="btn btn-info m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu9 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new high reveal" style="border: solid rgb(228, 179, 224);">
+          <div class="contenu contenu9 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new high reveal"
+            style="border: solid rgb(228, 179, 224);">
             <img src="./assets/img/peluches/diplo2.jpg" alt="diplodocus" />
             <div>
               <p>Diplodocus, 45 cm - 55 €</p>
@@ -243,7 +274,8 @@
             <button type="submit" class="btn btn-secondary m-3"><a href="#"
                 class="link-dark linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new high reveal" style="border: solid rgb(228, 179, 224);">
+          <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new high reveal"
+            style="border: solid rgb(228, 179, 224);">
             <img src="./assets/img/peluches/nounours.jpg" alt="nounours" />
             <div>
               <p>Nounours géant, 95cm - 80 €</p>
@@ -251,15 +283,17 @@
             <button type="submit" class="btn btn-secondary m-3"><a href="#"
                 class="link-dark linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new low reveal" style="border: solid rgb(228, 179, 224);">
+          <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new low reveal"
+            style="border: solid rgb(228, 179, 224);">
             <img src="./assets/img/peluches/baleine.jpg" alt="baleine" />
             <div>
               <p>Baleine, 22cm - 10 €</p>
             </div>
             <button type="submit" class="btn btn-secondary m-3"><a href="#"
-              class="link-dark linkunderline">Ajouter</a></button>
+                class="link-dark linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv med new goOut reveal" style="border: solid rgb(168, 168, 168);">
+          <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv med new goOut reveal"
+            style="border: solid rgb(168, 168, 168);">
             <img src="./assets/img/teenagers/concert.jpg" alt="concert" />
             <div>
               <p>Place de concert au choix - 50 €</p>
@@ -267,7 +301,8 @@
             <button type="submit" class="btn  btn-dark m-3"><a href="#"
                 class="link-light linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new high tech reveal" style="border: solid rgb(168, 168, 168);">
+          <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new high tech reveal"
+            style="border: solid rgb(168, 168, 168);">
             <img src="./assets/img/teenagers/nes.png" alt="supernes" />
             <div>
               <p>Super NES + 2 manettes + 4 jeux - 250 €</p>
@@ -275,7 +310,8 @@
             <button type="submit" class="btn  btn-dark m-3"><a href="#"
                 class="link-light linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv low new reveal" style="border: solid rgb(168, 168, 168);">
+          <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv low new reveal"
+            style="border: solid rgb(168, 168, 168);">
             <img src="./assets/img/teenagers/netflix.jpg" alt="netflix" />
             <div>
               <p>Carte cadeaux abonnement 1 mois au choix - 10 €</p>
@@ -283,8 +319,9 @@
             <button type="submit" class="btn  btn-dark m-3"><a href="#"
                 class="link-light linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center new high reveal" style="border: solid rgb(241, 239, 93);">
-            <img src="./assets/img/pets/cats/tree-black.jpg" alt="tree" id="treeImg"/>
+          <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center new high reveal"
+            style="border: solid rgb(241, 239, 93);">
+            <img src="./assets/img/pets/cats/tree-black.jpg" alt="tree" id="treeImg" />
             <div>
               <p>Arbre à chat, 80cm - 55 €</p>
             </div>
@@ -299,58 +336,62 @@
             <button type="submit" class="btn btn-warning m-3"><a href="#"
                 class="link-dark linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center new low reveal" style="border: solid rgb(241, 239, 93);">
-              <img src="./assets/img/pets/cats/cat-toy-5669830_1920.jpg" alt="tige" />
-              <div>
-                <p>Tige à plumes - 6 €</p>
-              </div>
-              <button type="submit" class="btn btn-warning m-3"><a href="#"
-                  class="link-dark linkunderline">Ajouter</a></button>
+          <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center new low reveal"
+            style="border: solid rgb(241, 239, 93);">
+            <img src="./assets/img/pets/cats/cat-toy-5669830_1920.jpg" alt="tige" />
+            <div>
+              <p>Tige à plumes - 6 €</p>
+            </div>
+            <button type="submit" class="btn btn-warning m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center new low reveal" style="border: solid rgb(241, 239, 93);">
-              <img src="./assets/img/pets/cats/foam-balls-1236931_1920.jpg" alt="boules_à_plumes" />
-              <div>
-                <p>Boule à plume, coloris aléatoire - 5 €</p>
-              </div>
-              <button type="submit" class="btn btn-warning m-3"><a href="#"
-                  class="link-dark linkunderline">Ajouter</a></button>
+          <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center new low reveal"
+            style="border: solid rgb(241, 239, 93);">
+            <img src="./assets/img/pets/cats/foam-balls-1236931_1920.jpg" alt="boules_à_plumes" />
+            <div>
+              <p>Boule à plume, coloris aléatoire - 5 €</p>
+            </div>
+            <button type="submit" class="btn btn-warning m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new low reveal" style="border: solid rgb(241, 239, 93);">
-              <img src="./assets/img/pets/dogs/freesbee.jpg" alt="freesbee" />
-              <div class="texte">
-                <p>Frisbee, coloris au choix - 10 €</p>
-              </div>
-              <form action="post">
-                <label for="couleur">Choix couleur :</label>
-                <select name="couleur" id="couleur" class="text-center">
-                  <option value="Vert">Vert</option>
-                  <option value="Jaune">Jaune</option>
-                  <option value="Violet">Violet</option>
-                  <option value="Rose">Rose</option>
-                </select>
-              </form>
-              <button type="submit" class="btn btn-danger m-3"><a href="#"
-                  class="link-dark linkunderline">Ajouter</a></button>
+          <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new low reveal"
+            style="border: solid rgb(241, 239, 93);">
+            <img src="./assets/img/pets/dogs/freesbee.jpg" alt="freesbee" />
+            <div class="texte">
+              <p>Frisbee, coloris au choix - 10 €</p>
+            </div>
+            <form action="post">
+              <label for="couleur">Choix couleur :</label>
+              <select name="couleur" id="couleur" class="text-center">
+                <option value="Vert">Vert</option>
+                <option value="Jaune">Jaune</option>
+                <option value="Violet">Violet</option>
+                <option value="Rose">Rose</option>
+              </select>
+            </form>
+            <button type="submit" class="btn btn-danger m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv access new low  access reveal" style="border: solid rgb(241, 239, 93);">
-              <img src="./assets/img/pets/dogs/leash.jpg" alt="laisse" />
-              <div class="texte">
-                <p>Laisse - à p. de 15 €</p>
-              </div>
-              <form action="post">
-                <label for="leash">Choix de la longueur :</label>
-                <select name="leash" id="leash" class="text-center">
-                  <option value="5m-15€">5m - 15 €</option>
-                  <option value="10m-20€">10m - 20 €</option>
-                  <option value="20m-25€">20m - 25 €</option>
-                  <option value="25m-30€">25m - 30 €</option>
-                </select>
-              </form>
-              <button type="submit" class="btn btn-danger m-3"><a href="#"
-                  class="link-dark linkunderline">Ajouter</a></button>
+          <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv access new low  access reveal"
+            style="border: solid rgb(241, 239, 93);">
+            <img src="./assets/img/pets/dogs/leash.jpg" alt="laisse" />
+            <div class="texte">
+              <p>Laisse - à p. de 15 €</p>
+            </div>
+            <form action="post">
+              <label for="leash">Choix de la longueur :</label>
+              <select name="leash" id="leash" class="text-center">
+                <option value="5m-15€">5m - 15 €</option>
+                <option value="10m-20€">10m - 20 €</option>
+                <option value="20m-25€">20m - 25 €</option>
+                <option value="25m-30€">25m - 30 €</option>
+              </select>
+            </form>
+            <button type="submit" class="btn btn-danger m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
           </div>
           <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new low reveal" style="border: solid rgb(179, 177, 177);">
-            <img src="./assets/img/board_games/puzz-24.jpg" alt="puzzle" id="puzzImg"/>
+            <img src="./assets/img/board_games/puzz-24.jpg" alt="puzzle" id="puzzImg" />
             <div>
               <p>Puzzles - à p. de 10 €</p>
             </div>
@@ -366,7 +407,8 @@
             <button type="submit" class="btn btn-success mt-3"><a href="#"
                 class="link-light linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new med reveal" style="border: solid rgb(179, 177, 177);">
+          <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new med reveal"
+            style="border: solid rgb(179, 177, 177);">
             <img src="./assets/img/board_games/darts-155726_1280.png" alt="flechettes" />
             <div>
               <p>Jeu de fléchettes - 20 €</p>
@@ -374,8 +416,9 @@
             <button type="submit" class="btn btn-success mt-3"><a href="#"
                 class="link-light linkunderline">Ajouter</a></button>
           </div>
-          <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new low reveal" style="border: solid rgb(179, 177, 177);">
-            <img src="./assets/img/board_games/dice-6.jpg" alt="dés" id="diceImg"/>
+          <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new low reveal"
+            style="border: solid rgb(179, 177, 177);">
+            <img src="./assets/img/board_games/dice-6.jpg" alt="dés" id="diceImg" />
             <div>
               <p>Dés - à p. de 5 €</p>
             </div>
@@ -393,49 +436,49 @@
         </div>
       </section>
 
+    </article>
+
+    <article>
       <section class="w-100 pt-4 mb-5" id="now">
         <p class="pt-4 pb-4 ps-5 bg-light" style="border: 4px solid #c08497">En ce moment...</p>
         <div class=" pt-5 pb-5 d-flex flex-wrap justify-content-evenly align-items-center h-100">
           <a href="./pages/jouets/peluches.html" class="w-50 text-center">
-            <img src="./assets/img/index/soft-toys-3158361_1920.jpg" alt="promotions" class="peluches w-50" /></a>
+            <img src="./assets/img/index/soft-toys-3158361_1920.jpg" alt="promotions" class="peluches w-75 w-md-50" /></a>
           <a href="./pages/jouets/teenager.html" class="w-50 text-center">
-            <img src="./assets/img/index/concert.jpg" alt="bons_sorties" class="concerts w-50" /></a>
-          </div>
-        </section>
+            <img src="./assets/img/index/concert.jpg" alt="bons_sorties" class="concerts w-75 w-md-50" /></a>
+        </div>
+      </section>
 
-        <section id="partners" class="w-100 pt-4 pb-4">
-          <p class="bg-light pt-4 pb-4 ps-5 fs-4" style="border: 4px solid #101935">Nos partenaires</p>
-          <div class="d-flex flex-column justify-content-center align-items-center m-3 text-center" id="partners">
-                <div class="mt-3 d-flex">
-                  <div>
-                    <img src="./assets/img/index/brands/doll.png" alt="logo-poupée"
-                      class="img-fluid d-block w-25 m-auto">
-                      <p>Doll Toys</p>
-                  </div>
-                  <div>
-                    <img src="./assets/img/index/brands/fish.png" alt="logo-poisson"
-                      class="img-fluid d-block w-25 m-auto">
-                      <p>Animaux et cie</p>
-                  </div>
-                  <div>
-                    <img src="./assets/img/index/brands/jigsaw.png" alt="logo-puzzle"
-                      class="img-fluid d-block w-25 m-auto">
-                      <p>Beaux Puzzle</p>
-                  </div>
-                  <div>
-                    <img src="./assets/img/index/brands/rat.png" alt="logo-souris"
-                      class="img-fluid d-block w-25 m-auto">
-                      <p>La Souris</p>
-                  </div>
-                  <div>
-                    <img src="./assets/img/index/brands/teddy-bear.png" alt="logo-peluche"
-                      class="img-fluid d-block w-25 m-auto">
-                      <p>Toudoux</p>
-                  </div>
+      <section id="partners" class="w-100 pt-4 pb-4">
+        <p class="bg-light pt-4 pb-4 ps-5 fs-4" style="border: 4px solid #101935">Nos partenaires</p>
+        <div class="m-3 text-center" id="partners">
+          <div class="mt-3 d-flex justify-content-center align-items-center gap-4 flex-wrap">
+            <div>
+              <img src="./assets/img/index/brands/doll.png" alt="logo-poupée" class="img-fluid d-block w-25 m-auto">
+              <p>Doll Toys</p>
+            </div>
+            <div>
+              <img src="./assets/img/index/brands/fish.png" alt="logo-poisson" class="img-fluid d-block w-25 m-auto">
+              <p>Animaux et cie</p>
+            </div>
+            <div>
+              <img src="./assets/img/index/brands/jigsaw.png" alt="logo-puzzle" class="img-fluid d-block w-25 m-auto">
+              <p>Beaux Puzzle</p>
+            </div>
+            <div>
+              <img src="./assets/img/index/brands/rat.png" alt="logo-souris" class="img-fluid d-block w-25 m-auto">
+              <p>La Souris</p>
+            </div>
+            <div>
+              <img src="./assets/img/index/brands/teddy-bear.png" alt="logo-peluche"
+                class="img-fluid d-block w-25 m-auto">
+              <p>Toudoux</p>
             </div>
           </div>
+        </div>
       </section>
     </article>
+
   </main>
 
   <footer class="footer bg-info footer-expand-lg mt-3">

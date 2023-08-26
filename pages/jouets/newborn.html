@@ -15,7 +15,7 @@
   <meta type="description" content="La Malle, concept-store de jouets en tous genre et, surtout, non genrés !">
   <style>
     .contenu {
-    border: solid rgb(193, 212, 230);
+      border: solid rgb(193, 212, 230);
     }
   </style>
 </head>
@@ -24,7 +24,7 @@
   <header id="up" class="sticky-top">
     <nav class="navbar bg-info navbar-expand-lg w-100">
       <a href="../../index.html" class="navbar-brand ms-2"><img src="../../assets/img/index/logo.jpg" alt="logo"
-          class="rounded" id="logo"/></a>
+          class="rounded" id="logo" /></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
@@ -46,8 +46,8 @@
             </ol>
           </li>
           <li class="nav-item w-100 dropdown">
-            <a href="chats.html" class="btn btn-info dropdown-toggle nav-link link-dark" role="button"
-              id="dropdownMenu" data-bs-toggle="dropdown" aria-expanded="false">Animaux</a>
+            <a href="chats.html" class="btn btn-info dropdown-toggle nav-link link-dark" role="button" id="dropdownMenu"
+              data-bs-toggle="dropdown" aria-expanded="false">Animaux</a>
             <ol class="dropdown-menu" aria-labelledby="dropdownMenu">
               <li><a href="../pets/chats.html" class="dropdown-item">Chats</a></li>
               <li><a href="../pets/chiens.html" class="dropdown-item">Chiens</a></li>
@@ -105,104 +105,118 @@
         </form>
       </section>
     </article>
-    
-    <!-- BLOC DE FILTRES -->
-<!-- news promo motricité réconfort -->
-    <div class="d-flex">
-    <aside class="contenu10 w-25">
-      <h3 class="text-center mt-3">Filtrer :</h3>
-      <section class="bloc2 d-flex flex-column m-3 p-3">
-        <h4>Prix</h4>
-        <div class="form-check">
-          <input type="checkbox" name="low" id="low" class="form-check-input" onchange="filterPriceLow()"/>
-          <label for="low" class="form-check-label">Jusqu'à 15 €</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="med" id="med" class="form-check-input" onchange="filterPriceMed()"/>
-          <label for="med" class="form-check-label">De 15 € à 30 €</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="high" id="high" class="form-check-input" onchange="filterPriceHigh()"/>
-          <label for="high" class="form-check-label">30 € et +</label>
-        </div>
-      </section>
-      <section class=" bloc2 d-flex flex-column m-3 p-3">
-        <h4>Produit :</h4>
-        <div class="form-check">
-          <input type="checkbox" name="new" id="new" class="form-check-input" onchange="filterNew()"/>
-          <label for="new" class="form-check-label">Nouveautés</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="promo" id="promo" class="form-check-input" onchange="filterPromo()"/>
-          <label for="promo" class="form-check-label">Promotions</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="motricity" id="motricity" class="form-check-input" onchange="filterMotricity()" />
-          <label for="motricity" class="form-check-label">Motricité</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="comfort" id="comfort" class="form-check-input" onchange="filterComfort()" />
-          <label for="comfort" class="form-check-label">Réconfort</label>
-        </div>
-      </section>
-    </aside>
 
-    <article class="d-flex justify-content-center pb-3">
-      <section class="container d-flex flex-wrap justify-content-around align-items-center">
-      <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv filterDiv motricity low">
-        <img src="../../assets/img/babies/baby.jpg" alt="book" class="image" />
-        <div>
-          <p>Livre à toucher - 10 €</p>
-        </div>
-        <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
-      </div>
-      <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv motricity med">
-        <img src="../../assets/img/babies/bb.jpg" alt="elec" />
-        <div>
-          <p>Jouet électronique - 20 €</p>
-        </div>
-        <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
-      </div>
-      <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new motricity high">
-        <img src="../../assets/img/babies/bobby-car.jpg" alt="voiture" />
-        <div>
-          <p>Triporteur - 30 €</p>
-        </div>
-        <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
-      </div>
-      <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv motricity med">
-        <img src="../../assets/img/babies/child-2293839_1920.jpg" alt="cubes" />
-        <div>
-          <p>Les 25 cubes en bois - 20 €</p>
-        </div>
-        <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
-      </div>
-      <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new comfort low">
-        <img src="../../assets/img/babies/crib-mobile-2654734_1920.jpg" alt="mobile" />
-        <div>
-          <p>Mobile en bois - 10 €</p>
-        </div>
-        <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
-      </div>
-      <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo comfort med"
-        id="peluches">
-        <img src="../../assets/img/babies/plushes.jpg" alt="peluche" />
-        <div>
-          <p>Sélection de peluches à moins de 20 €</p>
-        </div>
-        <button type="submit" class="btn btn-info m-3"><a href="/pages/jouets/peluches.html"
-            class="link-dark linkunderline">Aller</a></button>
-        </div>
-      <div class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new high">
-        <img src="../../assets/img/babies/seances_photo.jpg" alt="photo" />
-        <div>
-          <p>Offrez une séance photo à thème ! (à p. de 50 €)</p>
-        </div>
-        <button type="submit" class="btn btn-info m-3"><a href="#" class="link-dark linkunderline">Ajouter</a></button>
-      </div>
-    </section>
-    </article>
-  </div>
+    <!-- BLOC DE FILTRES -->
+    <!-- news promo motricité réconfort -->
+    <div class="w-100 pt-4 mb-5 d-flex flex-column flex-lg-row">
+      <aside class="contenu10 w-100">
+        <h3 class="text-center mt-3">Filtrer :</h3>
+        <section class="bloc2 d-flex flex-column m-3 p-3">
+          <h4>Prix</h4>
+          <div class="form-check">
+            <input type="checkbox" name="low" id="low" class="form-check-input" onchange="filterPriceLow()" />
+            <label for="low" class="form-check-label">Jusqu'à 15 €</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" name="med" id="med" class="form-check-input" onchange="filterPriceMed()" />
+            <label for="med" class="form-check-label">De 15 € à 30 €</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" name="high" id="high" class="form-check-input" onchange="filterPriceHigh()" />
+            <label for="high" class="form-check-label">30 € et +</label>
+          </div>
+        </section>
+        <section class=" bloc2 d-flex flex-column m-3 p-3">
+          <h4>Produit :</h4>
+          <div class="form-check">
+            <input type="checkbox" name="new" id="new" class="form-check-input" onchange="filterNew()" />
+            <label for="new" class="form-check-label">Nouveautés</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" name="promo" id="promo" class="form-check-input" onchange="filterPromo()" />
+            <label for="promo" class="form-check-label">Promotions</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" name="motricity" id="motricity" class="form-check-input"
+              onchange="filterMotricity()" />
+            <label for="motricity" class="form-check-label">Motricité</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" name="comfort" id="comfort" class="form-check-input" onchange="filterComfort()" />
+            <label for="comfort" class="form-check-label">Réconfort</label>
+          </div>
+        </section>
+      </aside>
+
+      <article class="d-flex justify-content-center pb-3 w-100">
+        <section class="w-100 container d-flex flex-wrap justify-content-evenly align-items-center m-0">
+          <div
+            class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv filterDiv motricity low">
+            <img src="../../assets/img/babies/baby.jpg" alt="book" class="image" />
+            <div>
+              <p>Livre à toucher - 10 €</p>
+            </div>
+            <button type="submit" class="btn btn-info m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
+          </div>
+          <div
+            class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv motricity med">
+            <img src="../../assets/img/babies/bb.jpg" alt="elec" />
+            <div>
+              <p>Jouet électronique - 20 €</p>
+            </div>
+            <button type="submit" class="btn btn-info m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
+          </div>
+          <div
+            class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new motricity high">
+            <img src="../../assets/img/babies/bobby-car.jpg" alt="voiture" />
+            <div>
+              <p>Triporteur - 30 €</p>
+            </div>
+            <button type="submit" class="btn btn-info m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
+          </div>
+          <div
+            class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv motricity med">
+            <img src="../../assets/img/babies/child-2293839_1920.jpg" alt="cubes" />
+            <div>
+              <p>Les 25 cubes en bois - 20 €</p>
+            </div>
+            <button type="submit" class="btn btn-info m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
+          </div>
+          <div
+            class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new comfort low">
+            <img src="../../assets/img/babies/crib-mobile-2654734_1920.jpg" alt="mobile" />
+            <div>
+              <p>Mobile en bois - 10 €</p>
+            </div>
+            <button type="submit" class="btn btn-info m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
+          </div>
+          <div
+            class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv promo comfort med"
+            id="peluches">
+            <img src="../../assets/img/babies/plushes.jpg" alt="peluche" />
+            <div>
+              <p>Sélection de peluches à moins de 20 €</p>
+            </div>
+            <button type="submit" class="btn btn-info m-3"><a href="/pages/jouets/peluches.html"
+                class="link-dark linkunderline">Aller</a></button>
+          </div>
+          <div
+            class="contenu contenu7 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center filterDiv new high">
+            <img src="../../assets/img/babies/seances_photo.jpg" alt="photo" />
+            <div>
+              <p>Offrez une séance photo à thème ! (à p. de 50 €)</p>
+            </div>
+            <button type="submit" class="btn btn-info m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
+          </div>
+        </section>
+      </article>
+    </div>
   </main>
 
   <footer class="footer bg-info footer-expand-lg mt-3">

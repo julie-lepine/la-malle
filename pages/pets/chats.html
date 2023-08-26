@@ -16,7 +16,7 @@
   <meta type="description" content="La Malle, concept-store de jouets en tous genre et, surtout, non genrés !">
   <style>
     .contenu {
-    border: solid rgb(241, 239, 93);
+      border: solid rgb(241, 239, 93);
     }
   </style>
 </head>
@@ -24,7 +24,8 @@
 <body>
   <header id="up" class="sticky-top">
     <nav class="navbar bg-info navbar-expand-lg w-100">
-      <a href="../../index.html" class="navbar-brand ms-2"><img src="../../assets/img/index/logo.jpg" alt="logo" class="rounded" id="logo"/></a>
+      <a href="../../index.html" class="navbar-brand ms-2"><img src="../../assets/img/index/logo.jpg" alt="logo"
+          class="rounded" id="logo" /></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list"
@@ -105,104 +106,108 @@
         </form>
       </section>
     </article>
-    
-        <!-- BLOC DE FILTRES -->
-        <div class="d-flex">
-    <aside class="contenu10 w-25">
-      <h3 class="text-center mt-3">Filtrer :</h3>
-      <section class="bloc2 d-flex flex-column m-3 p-3">
-        <h4>Prix</h4>
-        <div class="form-check">
-          <input type="checkbox" name="low" id="low" class="form-check-input" onchange="filterPriceLow()"/>
-          <label for="low" class="form-check-label">Jusqu'à 15 €</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="med" id="med" class="form-check-input" onchange="filterPriceMed()"/>
-          <label for="med" class="form-check-label">De 15 € à 50 €</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="high" id="high" class="form-check-input" onchange="filterPriceHigh()"/>
-          <label for="high" class="form-check-label">50 € et +</label>
-        </div>
-      </section>
-      <section class=" bloc2 d-flex flex-column m-3 p-3">
-        <h4>Produit :</h4>
-        <div class="form-check">
-          <input type="checkbox" name="new" id="new" class="form-check-input" onchange="filterNew()"/>
-          <label for="new" class="form-check-label">Nouveautés</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="seasoned" id="seasoned" class="form-check-input" onchange="filterSeasoned()" />
-          <label for="seasoned" class="form-check-label">Saisonniers</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" name="promo" id="promo" class="form-check-input" onchange="filterPromo()"/>
-          <label for="promo" class="form-check-label">Promotions</label>
-        </div>
-      </section>
-    </aside>
 
-    <article class="d-flex justify-content-center pb-3">
-      <section class="container d-flex flex-wrap justify-content-around align-items-center">
-        <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center new high">
-        <img src="../../assets/img/pets/cats/tree-black.jpg" alt="tree" id="treeImg"/>
-        <div>
-          <p>Arbre à chat, 80cm - 55 €</p>
-        </div>
-        <form action="post">
-          <label for="color">Choix couleur :</label>
-          <select name="color" id="treeColor" class="text-center">
-            <option value="black" onclick="displayImg()">Noir</option>
-            <option value="brown" onclick="displayImg()">Marron</option>
-            <option value="red" onclick="displayImg()">Rouge</option>
-          </select>
-        </form>
-        <button type="submit" class="btn btn-warning m-3"><a href="#"
-            class="link-dark linkunderline">Ajouter</a></button>
-        </div>
-        <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center promo med">
-        <img src="../../assets/img/pets/cats/cat-709013_1920.jpg" alt="jouets_nouriture" />
-        <div>
-          <p>Gamelle de réflexion - 20 €</p>
-        </div>
-        <button type="submit" class="btn btn-warning m-3"><a href="#"
-            class="link-dark linkunderline">Ajouter</a></button>
-       </div>
-      <div class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center new low">
-        <img src="../../assets/img/pets/cats/cat-toy-5669830_1920.jpg" alt="tige" />
-        <div>
-          <p>Tige à plumes - 6 €</p>
-        </div>
-        <button type="submit" class="btn btn-warning m-3"><a href="#"
-            class="link-dark linkunderline">Ajouter</a></button>
-      </div>
-      <div class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center new low">
-        <img src="../../assets/img/pets/cats/foam-balls-1236931_1920.jpg" alt="boules_à_plumes" />
-        <div>
-          <p>Boule à plume, coloris aléatoire - 5 €</p>
-        </div>
-        <button type="submit" class="btn btn-warning m-3"><a href="#"
-            class="link-dark linkunderline">Ajouter</a></button>
-      </div>
-      <div class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center low">
-        <img src="../../assets/img/pets/cats/toy-5160980_1920.jpg" alt="souris" />
-        <div>
-          <p>Souris couinante, coloris aléatoire - 5 €</p>
-        </div>
-        <button type="submit" class="btn btn-warning m-3"><a href="#"
-            class="link-dark linkunderline">Ajouter</a></button>
-      </div>
-      <div class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center promo season low">
-        <img src="../../assets/img/pets/cats/tree.jpg" alt="catnip" />
-        <div>
-          <p>Peluche de Noël (avec herbe à chat) - 8 €</p>
-        </div>
-        <button type="submit" class="btn btn-warning m-3"><a href="#"
-            class="link-dark linkunderline">Ajouter</a></button>
-      </div>
-    </section>
-    </article>
-  </div>
+    <!-- BLOC DE FILTRES -->
+    <div class="w-100 pt-4 mb-5 d-flex flex-column flex-lg-row">
+      <aside class="contenu10 w-100">
+        <h3 class="text-center mt-3">Filtrer :</h3>
+        <section class="bloc2 d-flex flex-column m-3 p-3">
+          <h4>Prix</h4>
+          <div class="form-check">
+            <input type="checkbox" name="low" id="low" class="form-check-input" onchange="filterPriceLow()" />
+            <label for="low" class="form-check-label">Jusqu'à 15 €</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" name="med" id="med" class="form-check-input" onchange="filterPriceMed()" />
+            <label for="med" class="form-check-label">De 15 € à 50 €</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" name="high" id="high" class="form-check-input" onchange="filterPriceHigh()" />
+            <label for="high" class="form-check-label">50 € et +</label>
+          </div>
+        </section>
+        <section class=" bloc2 d-flex flex-column m-3 p-3">
+          <h4>Produit :</h4>
+          <div class="form-check">
+            <input type="checkbox" name="new" id="new" class="form-check-input" onchange="filterNew()" />
+            <label for="new" class="form-check-label">Nouveautés</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" name="seasoned" id="seasoned" class="form-check-input" onchange="filterSeasoned()" />
+            <label for="seasoned" class="form-check-label">Saisonniers</label>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" name="promo" id="promo" class="form-check-input" onchange="filterPromo()" />
+            <label for="promo" class="form-check-label">Promotions</label>
+          </div>
+        </section>
+      </aside>
+
+      <article class="d-flex justify-content-center pb-3 w-100">
+        <section class="w-100 container d-flex flex-wrap justify-content-evenly align-items-center m-0">
+          <div class="contenu contenu1 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center new high">
+            <img src="../../assets/img/pets/cats/tree-black.jpg" alt="tree" id="treeImg" />
+            <div>
+              <p>Arbre à chat, 80cm - 55 €</p>
+            </div>
+            <form action="post">
+              <label for="color">Choix couleur :</label>
+              <select name="color" id="treeColor" class="text-center">
+                <option value="black" onclick="displayImg()">Noir</option>
+                <option value="brown" onclick="displayImg()">Marron</option>
+                <option value="red" onclick="displayImg()">Rouge</option>
+              </select>
+            </form>
+            <button type="submit" class="btn btn-warning m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
+          </div>
+          <div class="contenu contenu2 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center promo med">
+            <img src="../../assets/img/pets/cats/cat-709013_1920.jpg" alt="jouets_nouriture" />
+            <div>
+              <p>Gamelle de réflexion - 20 €</p>
+            </div>
+            <button type="submit" class="btn btn-warning m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
+          </div>
+          <div
+            class="contenu contenu3 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center new low">
+            <img src="../../assets/img/pets/cats/cat-toy-5669830_1920.jpg" alt="tige" />
+            <div>
+              <p>Tige à plumes - 6 €</p>
+            </div>
+            <button type="submit" class="btn btn-warning m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
+          </div>
+          <div
+            class="contenu contenu4 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center new low">
+            <img src="../../assets/img/pets/cats/foam-balls-1236931_1920.jpg" alt="boules_à_plumes" />
+            <div>
+              <p>Boule à plume, coloris aléatoire - 5 €</p>
+            </div>
+            <button type="submit" class="btn btn-warning m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
+          </div>
+          <div
+            class="contenu contenu5 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center low">
+            <img src="../../assets/img/pets/cats/toy-5160980_1920.jpg" alt="souris" />
+            <div>
+              <p>Souris couinante, coloris aléatoire - 5 €</p>
+            </div>
+            <button type="submit" class="btn btn-warning m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
+          </div>
+          <div
+            class="contenu contenu6 m-3 p-3 d-flex flex-column justify-content-around align-items-center text-center promo season low">
+            <img src="../../assets/img/pets/cats/tree.jpg" alt="catnip" />
+            <div>
+              <p>Peluche de Noël (avec herbe à chat) - 8 €</p>
+            </div>
+            <button type="submit" class="btn btn-warning m-3"><a href="#"
+                class="link-dark linkunderline">Ajouter</a></button>
+          </div>
+        </section>
+      </article>
+    </div>
   </main>
 
   <footer class="footer bg-info footer-expand-lg mt-3">
