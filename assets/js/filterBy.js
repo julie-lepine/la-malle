@@ -53,7 +53,7 @@ function filterPriceHigh() {
 // general
 function filterPromo() {
   let contents = document.getElementsByClassName("contenu");
-  const promo = document.getElementById("promo");
+  const promo = document.getElementById("promos");
   if (promo.checked) {
     for (let i = 0; i < contents.length; i++) {
       if (!contents[i].classList.contains("promo")) {

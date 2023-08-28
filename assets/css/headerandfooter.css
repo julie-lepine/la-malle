@@ -88,3 +88,23 @@ footer div {
 opacity: 1;
 transition: 2s cubic-bezier(0.5, 0, 0, 1);
 }
+
+/* new icon */
+.contenu {
+    position: relative;
+}
+
+.newIcon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 7vh!important;
+}
+
+.promoIcon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 7vh!important;
+}
+
