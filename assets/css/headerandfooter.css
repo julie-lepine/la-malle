@@ -108,3 +108,25 @@ transition: 2s cubic-bezier(0.5, 0, 0, 1);
     width: 7vh!important;
 }
 
+/* NEWSLETTER POP UP */
+#newContainer {
+    position: relative;
+}
+
+#newsCard {
+    position: absolute;
+    z-index: 1111;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ff7b79;
+    width: 50%;
+}
+
+#quitPopUp {
+    cursor: pointer;
+}
+
+#triggerNewsPopup {
+    background-color: #ff7b79;
+}

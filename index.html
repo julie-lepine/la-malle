@@ -79,7 +79,7 @@
           </button>
         </div>
         <div class="modal-body text-center">
-          <p class="fst-italic">du 15/02/2022 au 4/03/2022</p>
+          <p class="fst-italic">du 15/02/2024 au 4/03/2024</p>
           <p>Mets-toi en scène avec ton déguisement préféré et, <b>avec l'accord de tes parents</b>, envoie-nous la
             photo pour participer au concours de déguisement de l'année ! Les trois vainqueurs remporteront un
             déguisement Rubie's.</p>
@@ -98,7 +98,7 @@
 
   <main class="container-fluid w-100 w-md-75 pt-4" id="up">
 
-    <div class="m-3 mb-5 w-100 d-flex justify-content-around align-items-center gap-3">
+    <div class="m-3 mb-4 w-100 d-flex justify-content-around align-items-center gap-3">
       <button class="btn m-2 w-xl-75 w-md-100" data-bs-target="#modalConcours" data-bs-toggle="modal" type="button">
 
         <div
@@ -121,6 +121,52 @@
 
       </button>
 
+    </div>
+
+
+
+    <div class="w-100 d-flex justify-content-center mb-5 mt-5 pt-5 pb-5" id="newContainer">
+      <div class="w-50 text-center border-top border-bottom border-dark pt-5 pb-5">
+        <h2>Inscrivez-vous à notre newsletter</h2>
+        <button id="triggerNewsPopup" class="btn">Cliquez</button>
+      </div>
+      <div class="container border-2 w-50 p-5 rounded-1 hide" id="newsCard">
+        <div class="newsBody">
+          <form action="get">
+            <div>
+              <div class="text-center mb-3">
+                <p class="text-end" id="quitPopUp">❌</p>
+                <h3>Abonnez-vous à notre newsletter 📬</h3>
+                <h4>et recevez -10% sur votre prochaine commande.</h4>
+              </div>
+              <p>Vous recevrez aussi :</p>
+              <ul>
+                <li>des informations sur nos promotions</li>
+                <li>des invitations à nos événements</li>
+                <li>les dernières news de La Malle !</li>
+              </ul>
+            </div>
+            <div class="border border-2 p-3 mb-5">
+              <div class="mb-3">
+                <label for="inputName" class="form-label">Ajoutez votre prénom / nom,</label>
+                <input type="text" class="form-control" id="inputName">
+              </div>
+              <div class="mb-3">
+                <label for="inputEmail1" class="form-label">votre adresse email,</label>
+                <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Pas de spam, promis.</div>
+                <div class="text-center pt-3">
+                  <p>Pour en savoir plus sur la gestion de vos données personnelles et pour exercer vos droits, reportez-vous ci-dessous</p>
+                  <p><a href="../../confidentialite.html" target="_blank" class="text-decoration-none fw-bold">(vie privée et mentions légales)</a></p>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="newsFooter text-center">
+          <button type="btn" class="btn btn-danger" id="newsSubBtn">et c'est bon !</button>
+        </div>
+      </div>
     </div>
 
     <div class="d-flex flex-column flex-md-row gap-5 justify-content-center align-content-center mt-3 mb-5">
@@ -548,6 +594,7 @@
   <script src="./assets/js/displayPdtsOnSelect/index.js"></script>
   <script src="./assets/js/filterBy.js"></script>
   <script src="./assets/js/displayPromoNewBtns.js"></script>
+  <script src="../assets/js/displayNewsBox.js"></script>
 
 </body>
 
