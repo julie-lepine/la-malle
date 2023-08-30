@@ -1,34 +1,16 @@
 let test = document.getElementById('newsCard');
 const btn = document.getElementById("triggerNewsPopup");
 
-btn.addEventListener("click", function() {
+function triggersPopUp() {
   if (test.classList.contains("hide")) {
+    var blur = document.getElementById('blur');
     test.classList.remove("hide");
+    blur.classList.add("active");
+    test.classList.add("active");
   };
 }
-)
 
-// add blur on the rest of the doc
-
-const quitBtn = document.getElementById('quitPopUp');
-const sendBtn = document.getElementById("newsSubBtn");
-
-quitBtn.addEventListener("click", function() {
+function quitPopUp() {
   test.classList.add("hide");
-  document.removeEventListener("mouseleave", function() {
-    if (test.classList.contains("hide")) {
-      test.classList.remove("hide");
-    };
-    }
-  )
-})
-
-sendBtn.addEventListener("click", function() {
-  test.classList.add("hide");
-  document.removeEventListener("mouseleave", function() {
-    if (test.classList.contains("hide")) {
-      test.classList.remove("hide");
-    };
-    }
-  )
-})
+  blur.classList.remove("active");
+}

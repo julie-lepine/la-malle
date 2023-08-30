@@ -16,7 +16,7 @@
   <meta type="description" content="La Malle, concept-store de jouets en tous genre.">
 </head>
 
-<body>
+<body class="toggle">
   <header class="sticky-top">
     <nav class="navbar bg-info navbar-expand-lg w-100">
       <a href="index.html" class="navbar-brand ms-2"><img src="./assets/img/index/logo.jpg" alt="logo" class="rounded"
@@ -96,7 +96,7 @@
     </div>
   </article>
 
-  <main class="container-fluid w-100 w-md-75 pt-4" id="up">
+  <main class="container-fluid w-100 w-md-75 pt-4" id="blur">
 
     <div class="m-3 mb-4 w-100 d-flex justify-content-around align-items-center gap-3">
       <button class="btn m-2 w-xl-75 w-md-100" data-bs-target="#modalConcours" data-bs-toggle="modal" type="button">
@@ -123,49 +123,48 @@
 
     </div>
 
-
-
     <div class="w-100 d-flex justify-content-center mb-5 mt-5 pt-5 pb-5" id="newContainer">
       <div class="w-50 text-center border-top border-bottom border-dark pt-5 pb-5">
         <h2>Inscrivez-vous à notre newsletter</h2>
-        <button id="triggerNewsPopup" class="btn">Cliquez</button>
+        <button id="triggerNewsPopup" class="btn" onclick="triggersPopUp()">Cliquez</button>
       </div>
       <div class="container border-2 w-50 p-5 rounded-1 hide" id="newsCard">
-        <div class="newsBody">
-          <form action="get">
-            <div>
-              <div class="text-center mb-3">
-                <p class="text-end" id="quitPopUp">❌</p>
-                <h3>Abonnez-vous à notre newsletter 📬</h3>
-                <h4>et recevez -10% sur votre prochaine commande.</h4>
+          <div class="newsBody">
+            <form action="get">
+              <div>
+                <div class="text-center mb-3">
+                  <p class="text-end" id="quitPopUp" onclick="quitPopUp()">❌</p>
+                  <h3>Abonnez-vous à notre newsletter 📬</h3>
+                  <h4>et recevez -10% sur votre prochaine commande.</h4>
+                </div>
+                <p>Vous recevrez aussi :</p>
+                <ul>
+                  <li>des informations sur nos promotions</li>
+                  <li>des invitations à nos événements</li>
+                  <li>les dernières news de La Malle !</li>
+                </ul>
               </div>
-              <p>Vous recevrez aussi :</p>
-              <ul>
-                <li>des informations sur nos promotions</li>
-                <li>des invitations à nos événements</li>
-                <li>les dernières news de La Malle !</li>
-              </ul>
-            </div>
-            <div class="border border-2 p-3 mb-5">
-              <div class="mb-3">
-                <label for="inputName" class="form-label">Ajoutez votre prénom / nom,</label>
-                <input type="text" class="form-control" id="inputName">
-              </div>
-              <div class="mb-3">
-                <label for="inputEmail1" class="form-label">votre adresse email,</label>
-                <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">Pas de spam, promis.</div>
-                <div class="text-center pt-3">
-                  <p>Pour en savoir plus sur la gestion de vos données personnelles et pour exercer vos droits, reportez-vous ci-dessous</p>
-                  <p><a href="../../confidentialite.html" target="_blank" class="text-decoration-none fw-bold">(vie privée et mentions légales)</a></p>
+              <div class="border border-2 p-3 mb-5">
+                <div class="mb-3">
+                  <label for="inputName" class="form-label">Ajoutez votre prénom / nom,</label>
+                  <input type="text" class="form-control" id="inputName">
+                </div>
+                <div class="mb-3">
+                  <label for="inputEmail1" class="form-label">votre adresse email,</label>
+                  <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">Pas de spam, promis.</div>
+                  <div class="text-center pt-3">
+                    <p>Pour en savoir plus sur la gestion de vos données personnelles et pour exercer vos droits, reportez-vous ci-dessous</p>
+                    <p><a href="../../confidentialite.html" target="_blank" class="text-decoration-none fw-bold">(vie privée et mentions légales)</a></p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </form>
-        </div>
-        <div class="newsFooter text-center">
-          <button type="btn" class="btn btn-danger" id="newsSubBtn">et c'est bon !</button>
-        </div>
+            </form>
+          </div>
+          <div class="newsFooter text-center">
+            <button type="btn" class="btn btn-danger" id="newsSubBtn" onclick="quitPopUp()">et c'est bon !</button>
+          </div>
+
       </div>
     </div>
 
@@ -587,7 +586,7 @@
         <a href="#"><img src="./assets/img/footer/pint.png" alt="pinterest" width="50" /></a>
       </span>
     </div>
-    <a href="#up"><img src="./assets/img/index/up.png" alt="up button" class="up" /></a>
+    <a href="#blur"><img src="./assets/img/index/up.png" alt="up button" class="up" /></a>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
   <script src="./assets/js/displayHeader.js"></script>
